@@ -1,0 +1,82 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #181818;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Onest', sans-serif;
+}
+
+code, pre {
+    font-family: 'DM Mono', monospace;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    border-bottom: 1px solid #3d3d3d;
+    padding-top: 0.35em;
+    padding-left: 1em;
+    padding-bottom: 0.1em;
+}
+.navbar-logo img {
+    height: 48px;
+    width: auto;
+}
+
+.container {
+    display: flex;
+    margin-top: 80px;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    margin-bottom: 0;
+    width: 250px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    border-right: 1px solid #3D3D3D;
+    z-index: 99;
+}
+
+.section-label {
+  padding: 0.75rem 1rem;
+  color: #9D8FFF;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar a {
+  display: block;
+  padding: 0.75rem 0;
+  color: #F5F6F8;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #6B5BFF;
+}
+
+.content {
+  margin-left: 250px;
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+
+}
