@@ -10,10 +10,14 @@
         <meta name="application-name" content="Bohemia Health™: A Biotechnology Company" />
         <link rel="icon" type="image/x-icon" href="public/favicon.ico" />
         <link rel="stylesheet" href="styles.css" />
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+        <script src="search.js"></script>
+
     </head>
 
     <body>
@@ -24,7 +28,8 @@
                 <img src="public/assets/BHMDocs-ShorthandLogomark.png" alt="Bohemia Docs">
             </a>
                 <div class="search-container">
-                    <input type="text" class="navbar-search" id="searchInput" placeholder="Search docs..." />
+                    <i class="ti ti-search"></i>
+                    <input type="text" class="navbar-search" id="searchInput" placeholder="Search" />
                     <div class="search-results" id="searchResults"></div>
                 </div>
                 </div>
