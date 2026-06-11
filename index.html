@@ -19,16 +19,29 @@
     <body>
         <header>
             <nav class="navbar">
-                <a href="/" class="navbar-logo">
+                <div>
+                    <a href="/" class="navbar-logo">
                 <img src="public/assets/BHMDocs-ShorthandLogomark.png" alt="Bohemia Docs">
             </a>
+                <div class="search-container">
+                    <input type="text" class="navbar-search" id="searchInput" placeholder="Search docs..." />
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+                </div>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </nav>
         </header>
 
         <div class="container">
             <aside class="sidebar">
                 <div class="sidebar-section">
-                    <h3 class="section-label">Get Started</h3>
+                    <h6 class="section-label">Get Started</h6>
                     <ul class="section-links">
                         <li><a href="#">Overview</a></li>
                         <li><a href="#"> Account Setup</a></li>
@@ -36,13 +49,25 @@
                         <li><a href="#">Changelog</a></li>
                         <li><a href="#">Support</a></li>
                     </ul>
+
+                    <h6 class="section-label">Operate</h6>
+                    <ul class="section-links">
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Definitions</a></li>
+                        <li><a href="#">Authentication</a></li>
+                        <li><a href="#">Roles</a></li>
+                    </ul>
                 </div>
             </aside>
 
             <main class="content">
+                <div class="breadcrumb">
+                    <a href="/">Docs</a>
+                    <span>></span>
+                    <span><a href="#">Get Started</a></span>
+                </div>
                 <h1>Bohemia Health Docs</h1>
-                <p>Example Paragraph</p>
-            </main>
+                <p>Explore guides, tutorials, specs, SOPs, API documentation, support and policy to start building on Bohemia Health's platform. Find anything. Just start typing here.</p>
         </div>
     </body>
 </html>

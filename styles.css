@@ -1,76 +1,109 @@
 body {
-    font-family: 'DM Sans', sans-serif;
-    background-color: #181818;
-    color: white;
-    margin: 0;
-    padding: 0;
+  font-family: "DM Sans", sans-serif;
+  background-color: #000000;
+  color: white;
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Onest', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Onest", sans-serif;
 }
 
-code, pre {
-    font-family: 'DM Mono', monospace;
+code,
+pre {
+  font-family: "DM Mono", monospace;
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    border-bottom: 1px solid #3d3d3d;
-    padding-top: 0.35em;
-    padding-left: 1em;
-    padding-bottom: 0.1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  z-index: 100;
+  border-bottom: 0.4px solid #3d3d3d;
+  display: flex;
+  align-items: center;
+  padding-top: 0.35em;
+  padding-left: 1em;
+  padding-bottom: 0.1em;
 }
 .navbar-logo img {
-    height: 48px;
-    width: auto;
+  height: 48px;
+  width: auto;
 }
 
 .container {
-    display: flex;
-    margin-top: 80px;
-    gap: 2rem;
-    padding: 2rem;
+  display: flex;
+  margin-top: 64px;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .sidebar {
-    position: fixed;
-    top: 60px;
-    margin-bottom: 0;
-    width: 250px;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
-    border-right: 1px solid #3D3D3D;
-    z-index: 99;
+  position: fixed;
+  top: 71px;
+  width: 250px;
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+  border-right: 1px solid #3d3d3d;
+  z-index: 99;
 }
 
 .section-label {
-  padding: 0.75rem 1rem;
-  color: #9D8FFF;
-  font-weight: 600;
-  font-size: 0.875rem;
+  color: #9d8fff;
+  padding-top: 1.95rem;
+  font-weight: 500;
+  font-size: 0.88rem;
   margin: 0;
   border: none;
   background: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .sidebar ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 .sidebar a {
   display: block;
-  padding: 0.75rem 0;
-  color: #F5F6F8;
+  font-weight: 100;
+  font-size: 0.875rem;
+  padding: 0.55rem 0;
+  color: #f5f6f8;
   text-decoration: none;
 }
 
 .sidebar a:hover {
-  color: #6B5BFF;
+  color: #6b5bff;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 14px;
+  color: #6b5bff;
+}
+
+.breadcrumb span a {
+  color: #4b5563;
+}
+
+.breadcrumb a {
+  color: #6b5bff;
+  text-decoration: none;
+}
+
+.breadcrumb span {
+  color: #4b5563;
 }
 
 .content {
@@ -78,5 +111,10 @@ code, pre {
   flex: 1;
   padding: 2rem;
   overflow-y: auto;
+}
 
+nav li,
+.navbar li,
+.sidebar li {
+  list-style: none;
 }
