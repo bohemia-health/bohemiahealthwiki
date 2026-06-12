@@ -10,17 +10,22 @@ export default function Page() {
       </div>
 
       <section className="hero">
-        <h1>Bohemia Health Docs</h1>
-        <p>
-          Explore guides and tutorials to start building on Bohemia's platform
-        </p>
-        <section className="hero-btn-container">
-          <a href="/" className="get-started-btn">
-            Get started
-            <i className="ti ti-arrow-narrow-right"></i>
-          </a>
+        <img src="/assets/banner-dark.png" alt="banner" className="banner" />
+        <section className="hero-text">
+          <h1>Bohemia Health Docs</h1>
+          <p>
+            Explore guides and tutorials to start building on Bohemia's platform
+          </p>
+          <section className="hero-btn-container">
+            <a href="/" className="get-started-btn">
+              Get started
+              <i className="ti ti-arrow-narrow-right"></i>
+            </a>
+          </section>
         </section>
       </section>
+
+      <section className=""></section>
     </>
   );
 }

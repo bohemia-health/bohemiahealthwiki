@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "./globals.css";
 
 // METADATA
