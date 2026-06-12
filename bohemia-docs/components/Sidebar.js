@@ -1,7 +1,11 @@
 "use client";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function Sidebar() {
+  const pathname = usePathname();
+
   const [groupBuysOpen, setGroupBuysOpen] = useState(false);
   const [vendorsOpen, setVendorsOpen] = useState(false);
   const [orderManagementOpen, setOrderManagementOpen] = useState(false);
@@ -20,16 +24,33 @@ export default function Sidebar() {
         <h6 className="section-label">Get Started</h6>
         <ul className="section-links">
           <li>
-            <a href="#">Overview</a>
+            <a href="/" className={pathname === "/" ? "active" : ""}>
+              Overview
+            </a>
           </li>
           <li>
-            <a href="#">Account Setup</a>
+            <Link
+              href="/account-setup"
+              className={pathname === "/account-setup" ? "active" : ""}
+            >
+              Account Setup
+            </Link>
           </li>
           <li>
-            <a href="#">Resources</a>
+            <Link
+              href="/resources"
+              className={pathname === "/resources" ? "active" : ""}
+            >
+              Resources
+            </Link>
           </li>
           <li>
-            <a href="#">Support</a>
+            <Link
+              href="/support"
+              className={pathname === "/support" ? "active" : ""}
+            >
+              Support
+            </Link>
           </li>
         </ul>
         <h6 className="section-label">Operate</h6>
