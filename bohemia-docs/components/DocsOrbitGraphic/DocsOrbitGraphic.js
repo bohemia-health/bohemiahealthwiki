@@ -1,6 +1,6 @@
 // components/DocsOrbitGraphic.jsx
 
-import styles from "./DocsOrbitGraphic.module.css";
+import styles from "./DocsOrbitGraphic.module.scss";
 
 export default function DocsOrbitGraphic() {
   return (
