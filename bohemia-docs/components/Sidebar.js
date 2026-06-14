@@ -6,7 +6,11 @@ import Link from "next/link";
 export default function Sidebar() {
   const pathname = usePathname();
 
-  const [groupBuysOpen, setGroupBuysOpen] = useState(false);
+  const [groupBuysManuallyOpen, setGroupBuysManuallyOpen] = useState(false);
+
+  const groupBuysRouteOpen = pathname.startsWith("/group-buys");
+  const groupBuysOpen = groupBuysManuallyOpen || groupBuysRouteOpen;
+
   const [vendorsOpen, setVendorsOpen] = useState(false);
   const [orderManagementOpen, setOrderManagementOpen] = useState(false);
   const [inventoryOpen, setInventoryOpen] = useState(false);
@@ -72,9 +76,13 @@ export default function Sidebar() {
         {/* Sidebar Dropdown Component */}
         <div className="sidebar-dropdown">
           <button
-            className="sidebar-dropdown-btn"
+            className={
+              groupBuysOpen
+                ? "sidebar-dropdown-btn active"
+                : "sidebar-dropdown-btn"
+            }
             type="button"
-            onClick={() => setGroupBuysOpen(!groupBuysOpen)}
+            onClick={() => setGroupBuysManuallyOpen(!groupBuysManuallyOpen)}
             aria-expanded={groupBuysOpen}
           >
             <span className="dropdown-title">
@@ -99,7 +107,14 @@ export default function Sidebar() {
             }
           >
             <div className="sidebar-dropdown-inner">
-              <a href="/">Lifecycle</a>
+              <Link
+                href="/group-buys/fundamentals"
+                className={
+                  pathname === "/group-buys/fundamentals" ? "active" : ""
+                }
+              >
+                Lifecycle
+              </Link>
               <a href="/">Research</a>
               <a href="/">Planning & Setup</a>
               <a href="/">Pricing & Profitability</a>
