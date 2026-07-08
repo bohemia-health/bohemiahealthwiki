@@ -1,20 +1,167 @@
-/* components/DocsOrbitGraphic.module.css */
+// components/GroupBuyLifecycleGraphic/GroupBuyLifecycleGraphic.module.scss
 
-.graphicWrap {
-  width: 100%;
-  max-width: 760px;
-  margin: 2rem auto;
-  border-radius: 24px;
-  overflow: hidden;
-  background: #171a21;
-  border: 1px solid rgba(157, 143, 255, 0.12);
-  box-shadow:
-    0 24px 80px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+.wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px 56px 88px;
+  color: #f5f6f8;
 }
 
-.graphic {
-  display: block;
+.current {
+  color: rgba(245, 246, 248, 0.6);
+}
+
+.orbit {
+  position: relative;
+  width: 640px;
+  height: 640px;
+  margin: 52px auto 0;
+  user-select: none;
+}
+
+.svg {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+}
+
+.node {
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  border-radius: 999px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+
+  background: #1c2030;
+  border: 1px solid #2a2f3d;
+  color: rgba(245, 246, 248, 0.48);
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.activeNode {
+  background: rgba(107, 91, 255, 0.18);
+  border: 1.5px solid rgba(157, 143, 255, 0.55);
+  box-shadow:
+    0 0 0 6px rgba(107, 91, 255, 0.06),
+    0 0 32px rgba(107, 91, 255, 0.18);
+
+  .nodeNumber {
+    color: rgba(157, 143, 255, 0.95);
+  }
+
+  .nodeName {
+    color: #f5f6f8;
+  }
+}
+
+.nodeNumber {
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(245, 246, 248, 0.3);
+  line-height: 1;
+}
+
+.nodeName {
+  font-family: "Onest", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: rgba(245, 246, 248, 0.48);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.centerPanel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  text-align: center;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.phaseLabel {
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(157, 143, 255, 0.75);
+  margin-bottom: 10px;
+}
+
+.phaseTitle {
+  font-family: "Onest", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: #f5f6f8;
+  line-height: 1.08;
+  margin-bottom: 10px;
+}
+
+.phaseDesc {
+  font-size: 12.5px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(245, 246, 248, 0.58);
+}
+
+.hint {
+  text-align: center;
+  margin-top: 14px;
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(245, 246, 248, 0.22);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 780px) {
+  .wrapper {
+    padding: 36px 20px 64px;
+  }
+
+  .header {
+    align-items: flex-start;
+    gap: 18px;
+    flex-direction: column;
+  }
+
+  .orbit {
+    width: min(640px, 100%);
+    height: auto;
+    aspect-ratio: 1;
+    transform: scale(0.86);
+    transform-origin: top center;
+    margin-bottom: -72px;
+  }
 }
