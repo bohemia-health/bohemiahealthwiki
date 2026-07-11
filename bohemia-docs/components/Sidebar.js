@@ -86,15 +86,15 @@ export default function Sidebar() {
             aria-expanded={groupBuysOpen}
           >
             <span className="dropdown-title">
-              <i className="bi bi-people"></i>
+              <i className="ti ti-users"></i>
               <span>Group Buys</span>
             </span>
 
             <i
               className={
                 groupBuysOpen
-                  ? "bi bi-chevron-down dropdown-chevron open"
-                  : "bi bi-chevron-down drop-down-chevron"
+                  ? "ti ti-chevron-down dropdown-chevron open"
+                  : "ti ti-chevron-down dropdown-chevron"
               }
             ></i>
           </button>
@@ -135,15 +135,15 @@ export default function Sidebar() {
             aria-expanded={vendorsOpen}
           >
             <span className="dropdown-title">
-              <i className="bi bi-shop"></i>
+              <i className="ti ti-building-store"></i>
               <span>Vendors</span>
             </span>
 
             <i
               className={
                 vendorsOpen
-                  ? "bi bi-chevron-down dropdown-chevron open"
-                  : "bi bi-chevron-down dropdown-chevron"
+                  ? "ti ti-chevron-down dropdown-chevron open"
+                  : "ti ti-chevron-down dropdown-chevron"
               }
             ></i>
           </button>
@@ -176,15 +176,15 @@ export default function Sidebar() {
             aria-expanded={orderManagementOpen}
           >
             <span className="dropdown-title">
-              <i className="bi bi-clipboard-check"></i>
+              <i className="ti ti-clipboard-check"></i>
               <span>Order Management</span>
             </span>
 
             <i
               className={
                 orderManagementOpen
-                  ? "bi bi-chevron-down dropdown-chevron open"
-                  : "bi bi-chevron-down dropdown-chevron"
+                  ? "ti ti-chevron-down dropdown-chevron open"
+                  : "ti ti-chevron-down dropdown-chevron"
               }
             ></i>
           </button>
@@ -219,15 +219,15 @@ export default function Sidebar() {
             aria-expanded={inventoryOpen}
           >
             <span className="dropdown-title">
-              <i className="bi bi-box-seam"></i>
+              <i className="ti ti-package"></i>
               <span>Inventory</span>
             </span>
 
             <i
               className={
                 inventoryOpen
-                  ? "bi bi-chevron-down dropdown-chevron open"
-                  : "bi bi-chevron-down dropdown-chevron"
+                  ? "ti ti-chevron-down dropdown-chevron open"
+                  : "ti ti-chevron-down dropdown-chevron"
               }
             ></i>
           </button>
@@ -261,15 +261,15 @@ export default function Sidebar() {
             aria-expanded={thirdPartyTestingOpen}
           >
             <span className="dropdown-title">
-              <i className="bi bi-flask"></i>
+              <i className="ti ti-flask"></i>
               <span>3rd Party Testing</span>
             </span>
 
             <i
               className={
                 thirdPartyTestingOpen
-                  ? "bi bi-chevron-down dropdown-chevron open"
-                  : "bi bi-chevron-down dropdown-chevron"
+                  ? "ti ti-chevron-down dropdown-chevron open"
+                  : "ti ti-chevron-down dropdown-chevron"
               }
             ></i>
           </button>
@@ -303,15 +303,15 @@ export default function Sidebar() {
             aria-expanded={customerSupportOpen}
           >
             <span className="dropdown-title">
-              <i className="bi bi-chat-dots"></i>
+              <i className="ti ti-message-circle"></i>
               <span>Customer Support</span>
             </span>
 
             <i
               className={
                 customerSupportOpen
-                  ? "bi bi-chevron-down dropdown-chevron open"
-                  : "bi bi-chevron-down dropdown-chevron"
+                  ? "ti ti-chevron-down dropdown-chevron open"
+                  : "ti ti-chevron-down dropdown-chevron"
               }
             ></i>
           </button>
