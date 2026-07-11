@@ -9,10 +9,6 @@ export const metadata = {
 export default function GroupBuyFundamentalsPage() {
   return (
     <PageShell
-      breadcrumbs={[
-        { label: "Group Buys" },
-        { label: "Fundamentals", href: "/group-buys/fundamentals" },
-      ]}
       title="Group Buy Fundamentals"
     >
       <DocsOrbitGraphic />

@@ -1,7 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { breadcrumbsForPath } from "@/components/nav-data";
 
 export default function Navbar({ menuOpen, onMenuToggle }) {
+  const pathname = usePathname();
+  const crumbs = breadcrumbsForPath(pathname);
+
   return (
     <nav className="navbar">
       <div>
@@ -23,22 +30,22 @@ export default function Navbar({ menuOpen, onMenuToggle }) {
             priority
           />
         </Link>
+        <nav className="navbar-breadcrumb" aria-label="Breadcrumb">
+          <Link href="/">Docs</Link>
+          {crumbs.map((crumb) => (
+            <span key={crumb.label} className="navbar-breadcrumb-item">
+              <i className="ti ti-chevron-right" aria-hidden="true"></i>
+              {crumb.href ? (
+                <Link href={crumb.href}>{crumb.label}</Link>
+              ) : (
+                <span>{crumb.label}</span>
+              )}
+            </span>
+          ))}
+        </nav>
       </div>
 
       <ul>
-        <li className="navbar-search-item">
-          <div className="search-container">
-            <i className="ti ti-search" aria-hidden="true" />
-            <input
-              type="text"
-              className="navbar-search"
-              id="searchInput"
-              placeholder="Search"
-              aria-label="Search docs"
-            />
-            <div className="search-results" id="searchResults" />
-          </div>
-        </li>
         <li className="navbar-link-item">
           <Link href="/coming-soon/directory">Directory</Link>
         </li>
