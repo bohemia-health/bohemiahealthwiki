@@ -1,5 +1,3 @@
-// components/GroupBuyLifecycleGraphic/GroupBuyLifecycleGraphic.jsx
-
 "use client";
 
 import { useState } from "react";
