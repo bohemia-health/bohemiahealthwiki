@@ -1,10 +1,24 @@
-import Navbar from "@/components/Navbar";
-import Sidebar from "@/components/Sidebar";
-import "bootstrap-icons/font/bootstrap-icons.css";
+import { Onest, DM_Sans, DM_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import LayoutClient from "@/components/LayoutClient";
 import "./globals.css";
 
-// METADATA
+const onest = Onest({
+  subsets: ["latin"],
+  variable: "--next-font-heading",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--next-font-body",
+});
+
+const dmMono = DM_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--next-font-mono",
+});
+
 export const metadata = {
   title: "Bohemia Health Docs",
   description:
@@ -23,35 +37,19 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${onest.variable} ${dmSans.variable} ${dmMono.variable}`}
+    >
       <head>
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
         />
-
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
-        />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body>
-        <Navbar />
-        <div className="container">
-          <Sidebar />
-          <main className="content">{children}</main>
-        </div>
+        <LayoutClient>{children}</LayoutClient>
+        <Analytics />
       </body>
     </html>
   );

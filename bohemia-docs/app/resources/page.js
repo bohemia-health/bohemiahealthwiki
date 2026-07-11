@@ -1,18 +1,19 @@
+import PageShell from "@/components/PageShell";
+import ComingSoonNotice from "@/components/ComingSoonNotice";
+
+export const metadata = { title: "Resources — Bohemia Health Docs" };
+
 export default function ResourcesPage() {
   return (
-    <main className="content">
-      <div className="breadcrumb">
-        <a href="/">Docs</a>
-        <span>{">"}</span>
-        <span>Get started</span>
-        <span>{">"}</span>
-        <a href="/resources">Resources</a>
-      </div>
-
-      <section className="doc-page">
-        <h1>Resources</h1>
-        <p>Lorem Ipsum.</p>
-      </section>
-    </main>
+    <PageShell
+      breadcrumbs={[
+        { label: "Get Started" },
+        { label: "Resources", href: "/resources" },
+      ]}
+      title="Resources"
+      lede="Guides, references, and tools for navigating Bohemia Health group buys."
+    >
+      <ComingSoonNotice />
+    </PageShell>
   );
 }

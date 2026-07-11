@@ -1,93 +1,85 @@
-import Link from "next/link";
-import styles from "./page.module.scss";
+import PageShell from "@/components/PageShell";
+import { Card, CardGrid } from "@/components/Card";
 import DocsOrbitGraphic from "@/components/DocsOrbitGraphic/DocsOrbitGraphic.js";
+
+export const metadata = {
+  title: "Group Buy Fundamentals — Bohemia Health Docs",
+};
 
 export default function GroupBuyFundamentalsPage() {
   return (
-    <main className="content">
-      <div className="breadcrumb">
-        <a href="/">Docs</a>
-        <span>{">"}</span>
-        <span>Group Buys</span>
-        <span>{">"}</span>
-        <Link href="/group-buys/fundamentals">Overview</Link>
-      </div>
-      <section className="doc-page">
-        <DocsOrbitGraphic />
+    <PageShell
+      breadcrumbs={[
+        { label: "Group Buys" },
+        { label: "Fundamentals", href: "/group-buys/fundamentals" },
+      ]}
+      title="Group Buy Fundamentals"
+    >
+      <DocsOrbitGraphic />
 
-        <div className={styles.card}>
-          <h2>Group Buy</h2>
-          <h3>/gru:p/baɪ/</h3>
+      <Card variant="highlight" titleAs="h2" title="Group Buy">
+        <p>
+          <em>/gru:p/baɪ/</em> — a purchasing model where individuals pool
+          their collective buying power to secure discounts or bring custom
+          products to life.
+        </p>
+      </Card>
+
+      <h2>Group Buy vs Direct Sale</h2>
+      <CardGrid>
+        <Card title="Direct Sale">
           <p>
-            A purchasing model where individuals pool their collective buying
-            power to secure discounts or bring custom products to life.
+            Direct sales involve vendor-to-consumer sales, are faster to
+            fulfill, and are not dependent on a minimum order quantity.
           </p>
-        </div>
+        </Card>
+        <Card title="Group Buy">
+          <p>
+            Pre-planned with guarantees based on the relationship established
+            between the entity and the vendor company.
+          </p>
+        </Card>
+      </CardGrid>
 
-        <h2>Group Buy vs Direct Sale</h2>
-        <div className="comparisonGrid">
-          <div className="card">
-            <h3>Direct Sale</h3>
-            <p>
-              direct sales involve Vendor-2-Consumer sales, are faster to
-              fulfill, and non dependent on a minimum order quantity
-            </p>
-          </div>
+      <Card title="Group Buys hold more weight during negotiation, ordering, and fulfillment. This can include:">
+        <ul>
+          <li>Requests for one complete batch of a particular peptide</li>
+          <li>
+            Customized peptide configurations (i.e., Cartalax 40mg, KPV 50mg,
+            Retatrutide 100mg)
+          </li>
+          <li>
+            Easily-identifiable or branded vial crimp/cap color combinations
+          </li>
+        </ul>
+      </Card>
 
-          <div className="card">
-            <h3 className={styles.card}>Group Buy</h3>
-            <p>
-              pre-planned with guarantees based on the relationship established
-              between the entity and vendor company
-            </p>
-          </div>
-        </div>
-
-        <div className="card">
-          <h3>
-            Group Buys hold <span className="highlight-text">more</span> weight
-            during negotiation, ordering, and fulfillment secured through the
-            vendor. This can include:
-          </h3>
-          <ul>
-            <li>Requests for one complete batch of a particular peptide</li>
-            <li>
-              Customized peptide configurations (i.e., Cartalax 40mg, KPV 50mg,
-              Retatrutide 100mg)
-            </li>
-            <li>
-              Easily-identifiable or branded vial crimp/cap color combinations
-            </li>
-          </ul>
-        </div>
-
-        <h2>The Life Cycle of a Group Buy</h2>
-        <ol>
-          <li>
-            A <span>Group Buy Organizer</span> reaches out to the{" "}
-            <span>Vendor</span> based on group interest
-          </li>
-          <li>
-            We verify <span>guarantees</span>, discuss capacity, negotiate
-            pricing, and establish minimum order quantity
-          </li>
-          <li>The window of the Group Buy is confirmed</li>
-          <li>Orders are collected</li>
-          <li>The window closes and final numbers are reconciled</li>
-          <li>
-            An order sheet is written up with specifications of each item
-            ordered alongside total quantity
-          </li>
-          <li>
-            Production of each item commences, testing, shipping from the
-            vendor, to the customer
-          </li>
-          <li>
-            Any delays, shortages, address issues, and custom issues are handled
-            by us
-          </li>
-        </ol>
-      </section>
-    </main>
+      <h2>The Life Cycle of a Group Buy</h2>
+      <ol>
+        <li>
+          A Group Buy Organizer reaches out to the Vendor based on group
+          interest
+        </li>
+        <li>
+          We verify guarantees, discuss capacity, negotiate pricing, and
+          establish minimum order quantity
+        </li>
+        <li>The window of the Group Buy is confirmed</li>
+        <li>Orders are collected</li>
+        <li>The window closes and final numbers are reconciled</li>
+        <li>
+          An order sheet is written up with specifications of each item ordered
+          alongside total quantity
+        </li>
+        <li>
+          Production of each item commences, testing, shipping from the vendor,
+          to the customer
+        </li>
+        <li>
+          Any delays, shortages, address issues, and custom issues are handled
+          by us
+        </li>
+      </ol>
+    </PageShell>
   );
 }

@@ -1,15 +1,9 @@
-// components/GroupBuyLifecycleGraphic/GroupBuyLifecycleGraphic.module.scss
-
 .wrapper {
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
   padding: 48px 56px 88px;
   color: #f5f6f8;
-}
-
-.current {
-  color: rgba(245, 246, 248, 0.6);
 }
 
 .orbit {
@@ -124,36 +118,9 @@
   color: rgba(245, 246, 248, 0.58);
 }
 
-.hint {
-  text-align: center;
-  margin-top: 14px;
-  font-family: "DM Mono", monospace;
-  font-size: 9px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(245, 246, 248, 0.22);
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.4;
-  }
-}
-
 @media (max-width: 780px) {
   .wrapper {
     padding: 36px 20px 64px;
-  }
-
-  .header {
-    align-items: flex-start;
-    gap: 18px;
-    flex-direction: column;
   }
 
   .orbit {
