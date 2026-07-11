@@ -4,14 +4,6 @@ import { Card, CardGrid } from "@/components/Card";
 export default function Page() {
   return (
     <>
-      <nav className="breadcrumb" aria-label="Breadcrumb">
-        <Link href="/">Docs</Link>
-        <span className="breadcrumb-item">
-          <i className="ti ti-chevron-right" aria-hidden="true"></i>
-          <span>Get Started</span>
-        </span>
-      </nav>
-
       <section className="hero">
         <img src="/assets/banner-dark.png" alt="" className="banner" />
         <div className="hero-text">

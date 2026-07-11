@@ -1,21 +1,6 @@
 import PageShell from "@/components/PageShell";
 import ComingSoonNotice from "@/components/ComingSoonNotice";
-
-const TITLE_OVERRIDES = {
-  coas: "COAs",
-  "coa-requests": "COA Requests",
-  "no-go-vendors": "No-Go Vendors",
-  "log-in": "Log In",
-};
-
-function titleFromSlug(slug) {
-  const clean = decodeURIComponent(slug);
-  if (TITLE_OVERRIDES[clean]) return TITLE_OVERRIDES[clean];
-  return clean
-    .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-}
+import { titleFromSlug } from "@/components/nav-data";
 
 export async function generateMetadata({ params }) {
   const { topic } = await params;
@@ -27,7 +12,7 @@ export default async function ComingSoonPage({ params }) {
   const title = titleFromSlug(topic);
 
   return (
-    <PageShell breadcrumbs={[{ label: title }]} title={title}>
+    <PageShell title={title}>
       <ComingSoonNotice />
     </PageShell>
   );
