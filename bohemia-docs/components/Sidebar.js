@@ -1,360 +1,224 @@
 "use client";
+
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
+const TOP_SECTIONS = [
+  {
+    label: "Get Started",
+    links: [
+      { label: "Overview", href: "/" },
+      { label: "Account Setup", href: "/account-setup" },
+      { label: "Resources", href: "/resources" },
+      { label: "Support", href: "/support" },
+    ],
+  },
+  {
+    label: "Operate",
+    links: [
+      { label: "Terms of Use", href: "/coming-soon/terms-of-use" },
+      { label: "Definitions", href: "/coming-soon/definitions" },
+      { label: "Authentication", href: "/coming-soon/authentication" },
+      { label: "Roles", href: "/coming-soon/roles" },
+    ],
+  },
+];
+
+const DROPDOWNS = [
+  {
+    label: "Group Buys",
+    icon: "ti ti-users",
+    basePath: "/group-buys",
+    links: [
+      { label: "Fundamentals", href: "/group-buys/fundamentals" },
+      { label: "Research", href: "/coming-soon/group-buy-research" },
+      { label: "Planning & Setup", href: "/coming-soon/planning-and-setup" },
+      { label: "Pricing & Profitability", href: "/coming-soon/pricing-and-profitability" },
+      { label: "Vendors", href: "/coming-soon/group-buy-vendors" },
+      { label: "Fulfillment", href: "/coming-soon/fulfillment" },
+      { label: "Public Updates", href: "/coming-soon/public-updates" },
+      { label: "Regulation, Restriction and Exclusions", href: "/coming-soon/regulation-restriction-and-exclusions" },
+    ],
+  },
+  {
+    label: "Vendors",
+    icon: "ti ti-building-store",
+    links: [
+      { label: "Vendor Overview", href: "/coming-soon/vendor-overview" },
+      { label: "Gray Market Vendors", href: "/coming-soon/gray-market-vendors" },
+      { label: "Vendor Vetting", href: "/coming-soon/vendor-vetting" },
+      { label: "Approved Vendors", href: "/coming-soon/approved-vendors" },
+      { label: "No-Go Vendors", href: "/coming-soon/no-go-vendors" },
+      { label: "Vendor Behavior Policy", href: "/coming-soon/vendor-behavior-policy" },
+      { label: "Vendor Communication", href: "/coming-soon/vendor-communication" },
+      { label: "Vendor Incident Log", href: "/coming-soon/vendor-incident-log" },
+    ],
+  },
+  {
+    label: "Order Management",
+    icon: "ti ti-clipboard-check",
+    links: [
+      { label: "Order Intake", href: "/coming-soon/order-intake" },
+      { label: "Order Statuses", href: "/coming-soon/order-statuses" },
+      { label: "Order Changes", href: "/coming-soon/order-changes" },
+      { label: "Customer Holds", href: "/coming-soon/customer-holds" },
+      { label: "Add-Ons", href: "/coming-soon/add-ons" },
+      { label: "No Split Shipping", href: "/coming-soon/no-split-shipping" },
+      { label: "No Split Location Fulfillment", href: "/coming-soon/no-split-location-fulfillment" },
+      { label: "Shipping Readiness", href: "/coming-soon/shipping-readiness" },
+      { label: "Order Reconciliation", href: "/coming-soon/order-reconciliation" },
+    ],
+  },
+  {
+    label: "Inventory",
+    icon: "ti ti-package",
+    links: [
+      { label: "Inventory Intake", href: "/coming-soon/inventory-intake" },
+      { label: "Inventory Verification", href: "/coming-soon/inventory-verification" },
+      { label: "Shortages", href: "/coming-soon/shortages" },
+      { label: "Missing Kits", href: "/coming-soon/missing-kits" },
+      { label: "Broken Items", href: "/coming-soon/broken-items" },
+      { label: "Extra Kits", href: "/coming-soon/extra-kits" },
+      { label: "Bulk Packing Lists", href: "/coming-soon/bulk-packing-lists" },
+      { label: "Final Reconciliation", href: "/coming-soon/final-reconciliation" },
+    ],
+  },
+  {
+    label: "3rd Party Testing",
+    icon: "ti ti-flask",
+    links: [
+      { label: "Testing Overview", href: "/coming-soon/testing-overview" },
+      { label: "COAs", href: "/coming-soon/coas" },
+      { label: "Sample Selection", href: "/coming-soon/sample-selection" },
+      { label: "Testing Timelines", href: "/coming-soon/testing-timelines" },
+      { label: "Failed Results", href: "/coming-soon/failed-results" },
+      { label: "Retesting", href: "/coming-soon/retesting" },
+      { label: "COA Requests", href: "/coming-soon/coa-requests" },
+      { label: "Testing Communication Rules", href: "/coming-soon/testing-communication-rules" },
+    ],
+  },
+  {
+    label: "Customer Support",
+    icon: "ti ti-message-circle",
+    links: [
+      { label: "Support Workflow", href: "/coming-soon/support-workflow" },
+      { label: "Template Responses", href: "/coming-soon/template-responses" },
+      { label: "Address Changes", href: "/coming-soon/address-changes" },
+      { label: "Missing Items", href: "/coming-soon/missing-items" },
+      { label: "Impatient Customers", href: "/coming-soon/impatient-customers" },
+      { label: "Status Update Requests", href: "/coming-soon/status-update-requests" },
+      { label: "COA Requests", href: "/coming-soon/coa-requests" },
+      { label: "Behavior Policy", href: "/coming-soon/behavior-policy" },
+      { label: "Incident Examples", href: "/coming-soon/incident-examples" },
+      { label: "Escalation Rules", href: "/coming-soon/escalation-rules" },
+    ],
+  },
+];
+
+const BOTTOM_SECTION = {
+  label: "Trust & Safety",
+  links: [
+    { label: "International Orders", href: "/coming-soon/international-orders" },
+    { label: "GB Issues", href: "/coming-soon/group-buy-issues" },
+    { label: "Guarantees", href: "/coming-soon/guarantees" },
+    { label: "Reputation", href: "/coming-soon/reputation" },
+  ],
+};
+
+function SidebarSection({ section, pathname }) {
+  return (
+    <>
+      <p className="section-label">{section.label}</p>
+      <ul className="section-links">
+        {section.links.map((link) => (
+          <li key={link.label}>
+            <Link
+              href={link.href}
+              className={pathname === link.href ? "active" : ""}
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
+function SidebarDropdown({ item, pathname }) {
+  const routeOpen = item.basePath ? pathname.startsWith(item.basePath) : false;
+  const [manualOpen, setManualOpen] = useState(false);
+  const open = manualOpen || routeOpen;
+
+  return (
+    <div className="sidebar-dropdown">
+      <button
+        className={open ? "sidebar-dropdown-btn active" : "sidebar-dropdown-btn"}
+        type="button"
+        onClick={() => setManualOpen(!manualOpen)}
+        aria-expanded={open}
+      >
+        <span className="dropdown-title">
+          <i className={item.icon} aria-hidden="true"></i>
+          <span>{item.label}</span>
+        </span>
+        <i
+          className={
+            open
+              ? "ti ti-chevron-down dropdown-chevron open"
+              : "ti ti-chevron-down dropdown-chevron"
+          }
+          aria-hidden="true"
+        ></i>
+      </button>
+
+      <div className={open ? "sidebar-dropdown-menu open" : "sidebar-dropdown-menu"}>
+        <ul className="sidebar-dropdown-inner">
+          {item.links.map((link) => (
+            <li key={link.label}>
+              <Link
+                href={link.href}
+                className={pathname === link.href ? "active" : ""}
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
 export default function Sidebar({ open = false }) {
   const pathname = usePathname();
-
-  const [groupBuysManuallyOpen, setGroupBuysManuallyOpen] = useState(false);
-
-  const groupBuysRouteOpen = pathname.startsWith("/group-buys");
-  const groupBuysOpen = groupBuysManuallyOpen || groupBuysRouteOpen;
-
-  const [vendorsOpen, setVendorsOpen] = useState(false);
-  const [orderManagementOpen, setOrderManagementOpen] = useState(false);
-  const [inventoryOpen, setInventoryOpen] = useState(false);
-  const [thirdPartyTestingOpen, setThirdPartyTestingOpen] = useState(false);
-  const [adminOpen, setAdminOpen] = useState(false);
-  const [customerSupportOpen, setCustomerSupportOpen] = useState(false);
 
   return (
     <aside className={open ? "sidebar open" : "sidebar"}>
       <div className="sidebar-search">
-        <i className="ti ti-search"></i>
-        <input type="text" placeholder="Search articles..." />
+        <i className="ti ti-search" aria-hidden="true"></i>
+        <input
+          type="text"
+          placeholder="Search articles..."
+          aria-label="Search articles"
+        />
       </div>
-      <div className="sidebar-section">
-        <h6 className="section-label">Get Started</h6>
-        <ul className="section-links">
-          <li>
-            <a href="/" className={pathname === "/" ? "active" : ""}>
-              Overview
-            </a>
-          </li>
-          <li>
-            <Link
-              href="/account-setup"
-              className={pathname === "/account-setup" ? "active" : ""}
-            >
-              Account Setup
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/resources"
-              className={pathname === "/resources" ? "active" : ""}
-            >
-              Resources
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/support"
-              className={pathname === "/support" ? "active" : ""}
-            >
-              Support
-            </Link>
-          </li>
-        </ul>
-        <h6 className="section-label">Operate</h6>
-        <ul className="section-links">
-          <li>
-            <a href="#">Terms of Use</a>
-          </li>
-          <li>
-            <a href="#">Definitions</a>
-          </li>
-          <li>
-            <a href="#">Authentication</a>
-          </li>
-          <li>
-            <a href="#">Roles</a>
-          </li>
-        </ul>
+      <nav className="sidebar-section" aria-label="Docs navigation">
+        {TOP_SECTIONS.map((section) => (
+          <SidebarSection
+            key={section.label}
+            section={section}
+            pathname={pathname}
+          />
+        ))}
 
-        {/* Sidebar Dropdown Component */}
-        <div className="sidebar-dropdown">
-          <button
-            className={
-              groupBuysOpen
-                ? "sidebar-dropdown-btn active"
-                : "sidebar-dropdown-btn"
-            }
-            type="button"
-            onClick={() => setGroupBuysManuallyOpen(!groupBuysManuallyOpen)}
-            aria-expanded={groupBuysOpen}
-          >
-            <span className="dropdown-title">
-              <i className="ti ti-users"></i>
-              <span>Group Buys</span>
-            </span>
+        {DROPDOWNS.map((item) => (
+          <SidebarDropdown key={item.label} item={item} pathname={pathname} />
+        ))}
 
-            <i
-              className={
-                groupBuysOpen
-                  ? "ti ti-chevron-down dropdown-chevron open"
-                  : "ti ti-chevron-down dropdown-chevron"
-              }
-            ></i>
-          </button>
-
-          <div
-            className={
-              groupBuysOpen
-                ? "sidebar-dropdown-menu open"
-                : "sidebar-dropdown-menu"
-            }
-          >
-            <div className="sidebar-dropdown-inner">
-              <Link
-                href="/group-buys/fundamentals"
-                className={
-                  pathname === "/group-buys/fundamentals" ? "active" : ""
-                }
-              >
-                Lifecycle
-              </Link>
-              <a href="/">Research</a>
-              <a href="/">Planning & Setup</a>
-              <a href="/">Pricing & Profitability</a>
-              <a href="/">Vendors</a>
-              <a href="/">Fulfillment</a>
-              <a href="/">Public Updates</a>
-              <a href="/">Regulation, Restriction and Exclusions</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Vendors Dropdown Component */}
-        <div className="sidebar-dropdown">
-          <button
-            className="sidebar-dropdown-btn"
-            type="button"
-            onClick={() => setVendorsOpen(!vendorsOpen)}
-            aria-expanded={vendorsOpen}
-          >
-            <span className="dropdown-title">
-              <i className="ti ti-building-store"></i>
-              <span>Vendors</span>
-            </span>
-
-            <i
-              className={
-                vendorsOpen
-                  ? "ti ti-chevron-down dropdown-chevron open"
-                  : "ti ti-chevron-down dropdown-chevron"
-              }
-            ></i>
-          </button>
-
-          <div
-            className={
-              vendorsOpen
-                ? "sidebar-dropdown-menu open"
-                : "sidebar-dropdown-menu"
-            }
-          >
-            <div className="sidebar-dropdown-inner">
-              <a href="/">Vendor Overview</a>
-              <a href="/">Gray Market Vendors</a>
-              <a href="/">Vendor Vetting</a>
-              <a href="/">Approved Vendors</a>
-              <a href="/">No-Go Vendors</a>
-              <a href="/">Vendor Behavior Policy</a>
-              <a href="/">Vendor Communication</a>
-              <a href="/">Vendor Incident Log</a>
-            </div>
-          </div>
-        </div>
-        {/* Order Management Dropdown Component */}
-        <div className="sidebar-dropdown">
-          <button
-            className="sidebar-dropdown-btn"
-            type="button"
-            onClick={() => setOrderManagementOpen(!orderManagementOpen)}
-            aria-expanded={orderManagementOpen}
-          >
-            <span className="dropdown-title">
-              <i className="ti ti-clipboard-check"></i>
-              <span>Order Management</span>
-            </span>
-
-            <i
-              className={
-                orderManagementOpen
-                  ? "ti ti-chevron-down dropdown-chevron open"
-                  : "ti ti-chevron-down dropdown-chevron"
-              }
-            ></i>
-          </button>
-
-          <div
-            className={
-              orderManagementOpen
-                ? "sidebar-dropdown-menu open"
-                : "sidebar-dropdown-menu"
-            }
-          >
-            <div className="sidebar-dropdown-inner">
-              <a href="/">Order Intake</a>
-              <a href="/">Order Statuses</a>
-              <a href="/">Order Changes</a>
-              <a href="/">Customer Holds</a>
-              <a href="/">Add-Ons</a>
-              <a href="/">No Split Shipping</a>
-              <a href="/">No Split Location Fulfillment</a>
-              <a href="/">Shipping Readiness</a>
-              <a href="/">Order Reconciliation</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Inventory Dropdown Component */}
-        <div className="sidebar-dropdown">
-          <button
-            className="sidebar-dropdown-btn"
-            type="button"
-            onClick={() => setInventoryOpen(!inventoryOpen)}
-            aria-expanded={inventoryOpen}
-          >
-            <span className="dropdown-title">
-              <i className="ti ti-package"></i>
-              <span>Inventory</span>
-            </span>
-
-            <i
-              className={
-                inventoryOpen
-                  ? "ti ti-chevron-down dropdown-chevron open"
-                  : "ti ti-chevron-down dropdown-chevron"
-              }
-            ></i>
-          </button>
-
-          <div
-            className={
-              inventoryOpen
-                ? "sidebar-dropdown-menu open"
-                : "sidebar-dropdown-menu"
-            }
-          >
-            <div className="sidebar-dropdown-inner">
-              <a href="/">Inventory Intake</a>
-              <a href="/">Inventory Verification</a>
-              <a href="/">Shortages</a>
-              <a href="/">Missing Kits</a>
-              <a href="/">Broken Items</a>
-              <a href="/">Extra Kits</a>
-              <a href="/">Bulk Packing Lists</a>
-              <a href="/">Final Reconciliation</a>
-            </div>
-          </div>
-        </div>
-
-        {/* 3rd Party Testing Dropdown Component */}
-        <div className="sidebar-dropdown">
-          <button
-            className="sidebar-dropdown-btn"
-            type="button"
-            onClick={() => setThirdPartyTestingOpen(!thirdPartyTestingOpen)}
-            aria-expanded={thirdPartyTestingOpen}
-          >
-            <span className="dropdown-title">
-              <i className="ti ti-flask"></i>
-              <span>3rd Party Testing</span>
-            </span>
-
-            <i
-              className={
-                thirdPartyTestingOpen
-                  ? "ti ti-chevron-down dropdown-chevron open"
-                  : "ti ti-chevron-down dropdown-chevron"
-              }
-            ></i>
-          </button>
-
-          <div
-            className={
-              thirdPartyTestingOpen
-                ? "sidebar-dropdown-menu open"
-                : "sidebar-dropdown-menu"
-            }
-          >
-            <div className="sidebar-dropdown-inner">
-              <a href="/">Testing Overview</a>
-              <a href="/">COAs</a>
-              <a href="/">Sample Selection</a>
-              <a href="/">Testing Timelines</a>
-              <a href="/">Failed Results</a>
-              <a href="/">Retesting</a>
-              <a href="/">COA Requests</a>
-              <a href="/">Testing Communication Rules</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Customer Support Dropdown Component */}
-        <div className="sidebar-dropdown">
-          <button
-            className="sidebar-dropdown-btn"
-            type="button"
-            onClick={() => setCustomerSupportOpen(!customerSupportOpen)}
-            aria-expanded={customerSupportOpen}
-          >
-            <span className="dropdown-title">
-              <i className="ti ti-message-circle"></i>
-              <span>Customer Support</span>
-            </span>
-
-            <i
-              className={
-                customerSupportOpen
-                  ? "ti ti-chevron-down dropdown-chevron open"
-                  : "ti ti-chevron-down dropdown-chevron"
-              }
-            ></i>
-          </button>
-
-          <div
-            className={
-              customerSupportOpen
-                ? "sidebar-dropdown-menu open"
-                : "sidebar-dropdown-menu"
-            }
-          >
-            <div className="sidebar-dropdown-inner">
-              <a href="/">Support Workflow</a>
-              <a href="/">Template Responses</a>
-              <a href="/">Address Changes</a>
-              <a href="/">Missing Items</a>
-              <a href="/">Impatient Customers</a>
-              <a href="/">Status Update Requests</a>
-              <a href="/">COA Requests</a>
-              <a href="/">Behavior Policy</a>
-              <a href="/">Incident Examples</a>
-              <a href="/">Escalation Rules</a>
-            </div>
-          </div>
-        </div>
-
-        <h6 className="section-label">Circumvent</h6>
-        <ul className="section-links">
-          <li>
-            <a href="#">International Orders</a>
-          </li>
-          <li>
-            <a href="#">GB Issues</a>
-          </li>
-          <li>
-            <a href="#">Guarantees</a>
-          </li>
-          <li>
-            <a href="#">Reputation</a>
-          </li>
-        </ul>
-        {/* WARNING: this is where the Sidebar closes */}
-      </div>
+        <SidebarSection section={BOTTOM_SECTION} pathname={pathname} />
+      </nav>
     </aside>
   );
 }

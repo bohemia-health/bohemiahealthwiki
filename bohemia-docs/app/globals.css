@@ -447,6 +447,10 @@ nav li,
 
   display: flex;
   flex-direction: column;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .sidebar-dropdown-inner a {
@@ -498,12 +502,12 @@ nav li,
 /* HERO */
 
 .hero {
-  min-height: calc(100vh - var(--navbar-height));
+  min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 5.5rem;
-  padding-bottom: 5rem;
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-7);
 }
 
 .hero h1 {
@@ -828,4 +832,16 @@ nav li,
     height: 36px;
     width: auto;
   }
+}
+
+/* HOME ENTRY CARDS */
+
+.home-cards {
+  margin-top: var(--space-6);
+}
+
+.home-cards-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-4);
 }

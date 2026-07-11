@@ -1,31 +1,50 @@
+import Link from "next/link";
+import { Card, CardGrid } from "@/components/Card";
+
 export default function Page() {
   return (
     <>
-      <div className="breadcrumb">
-        <a href="/">Docs</a>
-        <span>{">"}</span>
-        <span>
-          <a href="#">Get Started</a>
+      <nav className="breadcrumb" aria-label="Breadcrumb">
+        <Link href="/">Docs</Link>
+        <span className="breadcrumb-item">
+          <i className="ti ti-chevron-right" aria-hidden="true"></i>
+          <span>Get Started</span>
         </span>
-      </div>
+      </nav>
 
       <section className="hero">
-        <img src="/assets/banner-dark.png" alt="banner" className="banner" />
-        <section className="hero-text">
+        <img src="/assets/banner-dark.png" alt="" className="banner" />
+        <div className="hero-text">
           <h1>Bohemia Health Docs</h1>
           <p>
-            Explore guides and tutorials to start building on Bohemia's platform
+            Explore guides and tutorials to start building on Bohemia&apos;s platform
           </p>
-          <section className="hero-btn-container">
-            <a href="/" className="get-started-btn">
+          <div className="hero-btn-container">
+            <Link href="/account-setup" className="get-started-btn">
               Get started
-              <i className="ti ti-arrow-narrow-right"></i>
-            </a>
-          </section>
-        </section>
+              <i className="ti ti-arrow-narrow-right" aria-hidden="true"></i>
+            </Link>
+          </div>
+        </div>
       </section>
 
-      <section className=""></section>
+      <section className="home-cards" aria-label="Browse the docs">
+        <h2 className="home-cards-title">Browse the docs</h2>
+        <CardGrid>
+          <Card titleAs="h3" title="Get Started" href="/account-setup">
+            <p>Set up your account and learn how the platform works.</p>
+          </Card>
+          <Card titleAs="h3" title="Group Buys" href="/group-buys/fundamentals">
+            <p>How group buys work, from research to fulfillment.</p>
+          </Card>
+          <Card titleAs="h3" title="Resources" href="/resources">
+            <p>Guides, references, and tools for members.</p>
+          </Card>
+          <Card titleAs="h3" title="Support" href="/support">
+            <p>Get help with orders, shipping, and everything in between.</p>
+          </Card>
+        </CardGrid>
+      </section>
     </>
   );
 }
