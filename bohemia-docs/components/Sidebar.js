@@ -3,7 +3,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-export default function Sidebar() {
+export default function Sidebar({ open = false }) {
   const pathname = usePathname();
 
   const [groupBuysManuallyOpen, setGroupBuysManuallyOpen] = useState(false);
@@ -19,7 +19,7 @@ export default function Sidebar() {
   const [customerSupportOpen, setCustomerSupportOpen] = useState(false);
 
   return (
-    <aside className="sidebar">
+    <aside className={open ? "sidebar open" : "sidebar"}>
       <div className="sidebar-search">
         <i className="ti ti-search"></i>
         <input type="text" placeholder="Search articles..." />

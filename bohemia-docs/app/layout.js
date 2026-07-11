@@ -1,7 +1,6 @@
 import { Onest, DM_Sans, DM_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import Navbar from "@/components/Navbar";
-import Sidebar from "@/components/Sidebar";
+import LayoutClient from "@/components/LayoutClient";
 import "./globals.css";
 
 const onest = Onest({
@@ -49,11 +48,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <Navbar />
-        <div className="container">
-          <Sidebar />
-          <main className="content">{children}</main>
-        </div>
+        <LayoutClient>{children}</LayoutClient>
         <Analytics />
       </body>
     </html>
