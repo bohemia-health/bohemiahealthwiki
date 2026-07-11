@@ -17,7 +17,7 @@ export default function GroupBuyFundamentalsPage() {
     >
       <DocsOrbitGraphic />
 
-      <Card variant="highlight" title="Group Buy">
+      <Card variant="highlight" titleAs="h2" title="Group Buy">
         <p>
           <em>/gru:p/baɪ/</em> — a purchasing model where individuals pool
           their collective buying power to secure discounts or bring custom
