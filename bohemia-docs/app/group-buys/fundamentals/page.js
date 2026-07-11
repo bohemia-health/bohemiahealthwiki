@@ -35,7 +35,7 @@ export default function GroupBuyFundamentalsPage() {
           </div>
 
           <div className="card">
-            <h3 className={styles.card}>Group Buy</h3>
+            <h3>Group Buy</h3>
             <p>
               pre-planned with guarantees based on the relationship established
               between the entity and vendor company
