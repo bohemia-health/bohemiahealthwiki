@@ -1,4 +1,4 @@
-import { Onest, DM_Sans, DM_Mono } from "next/font/google";
+import { Onest, Inter, DM_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import LayoutClient from "@/components/LayoutClient";
 import "./globals.css";
@@ -8,7 +8,7 @@ const onest = Onest({
   variable: "--next-font-heading",
 });
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--next-font-body",
 });
@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${onest.variable} ${dmSans.variable} ${dmMono.variable}`}
+      className={`${onest.variable} ${inter.variable} ${dmMono.variable}`}
     >
       <head>
         <link

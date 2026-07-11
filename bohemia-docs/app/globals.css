@@ -49,6 +49,8 @@ html {
 
 body {
   font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
   background-color: var(--bg);
   color: var(--text-primary);
   margin: 0;
@@ -324,7 +326,7 @@ nav li,
   padding: 1rem var(--sidebar-pad-x) 0.35rem;
   margin: 0;
 
-  font-weight: 300;
+  font-weight: 500;
   font-size: 0.685rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -342,17 +344,17 @@ nav li,
 .sidebar .sidebar-section a {
   display: block;
 
-  font-size: 0.95rem;
-  padding: 0.55rem 0.8rem;
+  font-size: 0.875rem;
+  padding: 0.45rem 0.8rem;
   margin: 0;
 
   border-radius: var(--radius-sm);
 
   color: var(--text-primary);
-  font-weight: 300;
-  letter-spacing: 0.2px;
+  font-weight: 510;
+  letter-spacing: 0.1px;
   text-decoration: none;
-  line-height: normal;
+  line-height: 1.5;
 }
 
 .sidebar a:hover {
@@ -382,11 +384,11 @@ nav li,
 
   color: var(--text-primary);
   font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 300;
-  letter-spacing: 0.2px;
+  font-size: 0.875rem;
+  font-weight: 510;
+  letter-spacing: 0.1px;
   text-align: left;
-  line-height: normal;
+  line-height: 1.5;
 
   padding: 0.55rem 0.8rem;
   margin: 0;
@@ -459,9 +461,9 @@ nav li,
   color: var(--text-secondary);
   text-decoration: none;
 
-  font-size: 0.78rem;
-  font-weight: 300;
-  line-height: 1.2;
+  font-size: 0.8125rem;
+  font-weight: 450;
+  line-height: 1.5;
 
   padding: 0.45rem 0.65rem;
   border-radius: var(--radius-sm);
@@ -523,7 +525,7 @@ nav li,
 .hero p {
   font-family: var(--font-body);
   font-size: clamp(1rem, 1.25vw, 1.2rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1.65;
   color: var(--text-secondary);
@@ -588,7 +590,7 @@ nav li,
 .doc-lede {
   color: var(--text-secondary);
   font-size: 1.05rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.65;
   margin: var(--space-3) 0 0;
 }
@@ -602,8 +604,8 @@ nav li,
 .doc-page p,
 .doc-page li {
   color: var(--text-secondary);
-  line-height: 1.7;
-  font-weight: 300;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 /* BREADCRUMB (refresh) */
@@ -653,7 +655,7 @@ nav li,
 
 .card-body {
   color: var(--text-secondary);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
 }
 
@@ -666,7 +668,9 @@ nav li,
 }
 
 .card--link {
-  transition: border-color 0.15s ease, transform 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease;
 }
 
 .card--link:hover {
@@ -718,7 +722,7 @@ nav li,
 .coming-soon-sub {
   margin: 0;
   color: var(--text-muted);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .btn-accent {
