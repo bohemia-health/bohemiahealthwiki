@@ -705,6 +705,55 @@ nav li,
   color: var(--text-primary);
 }
 
+/* CALLOUTS */
+
+.callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+
+  margin: var(--space-5) 0;
+  padding: 1rem 1.15rem;
+  border-radius: var(--radius-md);
+
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.callout i {
+  flex-shrink: 0;
+  margin-top: 3px;
+  font-size: 1rem;
+}
+
+.callout-body p {
+  margin: 0;
+}
+
+.callout-body p + p {
+  margin-top: 0.5em;
+}
+
+.callout--warning {
+  background: rgba(240, 185, 75, 0.07);
+  border: 1px solid rgba(240, 185, 75, 0.22);
+  color: var(--text-secondary);
+}
+
+.callout--warning i {
+  color: #e2b34d;
+}
+
+.callout--info {
+  background: rgba(107, 91, 255, 0.08);
+  border: 1px solid rgba(107, 91, 255, 0.25);
+  color: var(--text-secondary);
+}
+
+.callout--info i {
+  color: var(--accent-soft);
+}
+
 /* TABLE OF CONTENTS (right pane) */
 
 .doc-toc {

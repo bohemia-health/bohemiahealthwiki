@@ -1,4 +1,5 @@
 import PageShell from "@/components/PageShell";
+import Callout from "@/components/Callout";
 import DocsOrbitGraphic from "@/components/DocsOrbitGraphic/DocsOrbitGraphic.js";
 
 export const metadata = {
@@ -71,6 +72,18 @@ export default function GroupBuyFundamentalsPage() {
           </tr>
         </tbody>
       </table>
+
+      <Callout variant="warning">
+        <p>
+          A common misconception in this model is where the organizer and/or
+          participants begin to treat a group buy as a retail sale. The
+          distinction here is that a group buy is not a retail sale or
+          transaction. While the cost is lower, the risk is much higher than a
+          regular sale with stock on-hand. Ensure that you, and the
+          participants understand the difference. This will save you much time
+          in the future.
+        </p>
+      </Callout>
 
       <h2>Group Buy vs Direct Sale</h2>
       <h3>Direct Sale</h3>
