@@ -91,7 +91,9 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: none;
-  overflow-x: hidden;
+  /* clip, not hidden: hidden makes body a scroll container, which
+     kills position: sticky for the doc TOC */
+  overflow-x: clip;
 }
 
 h1,
@@ -668,6 +670,19 @@ nav li,
 .doc-page h2,
 .doc-page h3 {
   scroll-margin-top: calc(var(--navbar-height) + 24px);
+}
+
+.doc-page a {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--text-faint);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.doc-page a:hover {
+  text-decoration-color: var(--text-primary);
 }
 
 .doc-page table {
