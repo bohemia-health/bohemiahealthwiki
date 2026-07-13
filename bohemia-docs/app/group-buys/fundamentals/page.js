@@ -1,5 +1,4 @@
 import PageShell from "@/components/PageShell";
-import { Card, CardGrid } from "@/components/Card";
 import DocsOrbitGraphic from "@/components/DocsOrbitGraphic/DocsOrbitGraphic.js";
 
 export const metadata = {
@@ -8,47 +7,97 @@ export const metadata = {
 
 export default function GroupBuyFundamentalsPage() {
   return (
-    <PageShell
-      title="Group Buy Fundamentals"
-    >
+    <PageShell title="Group Buy Fundamentals">
+      <p>
+        Learn the fundamentals in how group orders are researched, made, and ran
+        all through one platform. Only system admin can create new group buys.
+        Click on the orbital to view each phase's scope.
+      </p>
       <DocsOrbitGraphic />
 
-      <Card variant="highlight" titleAs="h2" title="Group Buy">
-        <p>
-          <em>/gru:p/baɪ/</em> — a purchasing model where individuals pool
-          their collective buying power to secure discounts or bring custom
-          products to life.
-        </p>
-      </Card>
+      <h2>Group Buy Concepts</h2>
+      <p>
+        Group Buys are an organized event or coordinated effort in which a group
+        of multiple individuals, or group buy organizer(s) (GBO) negotiate
+        wholesale pricing on an item or set of items. They combine their
+        singular purchasing power so that the vendor can provide discounts,
+        manufacture a customized formulation, or aquire the item under terms
+        that would not normally be available to individual clientele.
+      </p>
+
+      <p>
+        Running a group buy is not simple, it requires effort on the part of the
+        organizers and the participants taking place within the group buy.
+        Because of this, there are caveats that must be implemented to ensure
+        the absolute highest possible success for a group buy.
+      </p>
+
+      <p>This takes place within the four phases:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Research</td>
+            <td>
+              Survey member demand, vet the compound, and confirm a supplier
+              can meet spec at volume.
+            </td>
+          </tr>
+          <tr>
+            <td>Negotiate</td>
+            <td>
+              Lock pricing, MOQs, and delivery windows with the shortlisted
+              supplier before committing.
+            </td>
+          </tr>
+          <tr>
+            <td>Order</td>
+            <td>
+              Place the confirmed order, collect payment from members, and
+              track fulfillment milestones.
+            </td>
+          </tr>
+          <tr>
+            <td>Fulfill</td>
+            <td>
+              Receive, quality-check, and dispatch to members; close the batch
+              and archive the COA.
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
       <h2>Group Buy vs Direct Sale</h2>
-      <CardGrid>
-        <Card title="Direct Sale">
-          <p>
-            Direct sales involve vendor-to-consumer sales, are faster to
-            fulfill, and are not dependent on a minimum order quantity.
-          </p>
-        </Card>
-        <Card title="Group Buy">
-          <p>
-            Pre-planned with guarantees based on the relationship established
-            between the entity and the vendor company.
-          </p>
-        </Card>
-      </CardGrid>
+      <h3>Direct Sale</h3>
+      <p>
+        Direct sales involve vendor-to-consumer sales, are faster to fulfill,
+        and are not dependent on a minimum order quantity.
+      </p>
+      <h3>Group Buy</h3>
+      <p>
+        Pre-planned with guarantees based on the relationship established
+        between the entity and the vendor company.
+      </p>
 
-      <Card title="Group Buys hold more weight during negotiation, ordering, and fulfillment. This can include:">
-        <ul>
-          <li>Requests for one complete batch of a particular peptide</li>
-          <li>
-            Customized peptide configurations (i.e., Cartalax 40mg, KPV 50mg,
-            Retatrutide 100mg)
-          </li>
-          <li>
-            Easily-identifiable or branded vial crimp/cap color combinations
-          </li>
-        </ul>
-      </Card>
+      <p>
+        Group Buys hold more weight during negotiation, ordering, and
+        fulfillment. This can include:
+      </p>
+      <ul>
+        <li>Requests for one complete batch of a particular peptide</li>
+        <li>
+          Customized peptide configurations (i.e., Cartalax 40mg, KPV 50mg,
+          Retatrutide 100mg)
+        </li>
+        <li>
+          Easily-identifiable or branded vial crimp/cap color combinations
+        </li>
+      </ul>
 
       <h2>The Life Cycle of a Group Buy</h2>
       <ol>

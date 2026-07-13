@@ -28,9 +28,8 @@
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
   --font-body:
-    var(--next-font-body), "SF Pro Display", -apple-system, system-ui,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+    "Inter Variable", "SF Pro Display", -apple-system, system-ui, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   --font-mono: var(--next-font-mono), monospace;
 
   /* geometry */
@@ -52,6 +51,7 @@ html {
   overflow-y: scroll;
   scrollbar-gutter: stable;
   color-scheme: dark;
+  scroll-behavior: smooth;
 }
 
 /* SCROLLBARS */
@@ -81,7 +81,7 @@ html {
 
 body {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.4;
   background-color: var(--bg);
   color: var(--text-primary);
@@ -654,8 +654,107 @@ nav li,
 
 /* DOC PAGE */
 
+.doc-layout {
+  display: flex;
+  justify-content: center;
+  gap: clamp(2rem, 4vw, 4.5rem);
+}
+
 .doc-page {
   max-width: 75ch;
+  min-width: 0;
+}
+
+.doc-page h2,
+.doc-page h3 {
+  scroll-margin-top: calc(var(--navbar-height) + 24px);
+}
+
+.doc-page table {
+  width: 100%;
+  margin: var(--space-5) 0 var(--space-6);
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.doc-page th {
+  padding: 0 1.25rem 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.doc-page td {
+  padding: 0.9rem 1.25rem 0.9rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.doc-page th:last-child,
+.doc-page td:last-child {
+  padding-right: 0;
+}
+
+.doc-page td:first-child {
+  width: 11rem;
+  color: var(--text-primary);
+}
+
+/* TABLE OF CONTENTS (right pane) */
+
+.doc-toc {
+  width: 220px;
+  flex-shrink: 0;
+
+  position: sticky;
+  top: calc(var(--navbar-height) + 48px);
+  align-self: flex-start;
+  max-height: calc(100vh - var(--navbar-height) - 96px);
+  overflow-y: auto;
+}
+
+.doc-toc ul {
+  margin: 0;
+  padding: 0 0 0 1rem;
+  list-style: none;
+  border-left: 1px solid var(--border-subtle);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.doc-toc-sub {
+  padding-left: 0.85rem;
+}
+
+.doc-toc a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  line-height: 1.4;
+
+  transition: color 0.15s ease;
+}
+
+.doc-toc a:hover {
+  color: var(--text-secondary);
+}
+
+.doc-toc a.active {
+  color: var(--text-primary);
+}
+
+@media (max-width: 1399px) {
+  .doc-toc {
+    display: none;
+  }
 }
 
 .doc-header {
