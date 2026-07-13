@@ -12,17 +12,32 @@ const PAGE_ORDER = [...TOP_SECTIONS, ...DROPDOWNS].flatMap(
 export default function PageNav() {
   const pathname = usePathname();
   const index = PAGE_ORDER.findIndex((link) => link.href === pathname);
-  if (index === -1 || index === PAGE_ORDER.length - 1) return null;
+  if (index === -1) return null;
 
-  const next = PAGE_ORDER[index + 1];
+  const prev = index > 0 ? PAGE_ORDER[index - 1] : null;
+  const next = index < PAGE_ORDER.length - 1 ? PAGE_ORDER[index + 1] : null;
+  if (!prev && !next) return null;
 
   return (
-    <Link href={next.href} className="doc-next">
-      <span className="doc-next-label">Next</span>
-      <span className="doc-next-title">
-        {next.label}
-        <i className="ti ti-chevron-right" aria-hidden="true"></i>
-      </span>
-    </Link>
+    <nav className="doc-pagenav" aria-label="Page navigation">
+      {prev && (
+        <Link href={prev.href} className="doc-pagenav-card doc-prev">
+          <span className="doc-pagenav-label">Previous</span>
+          <span className="doc-pagenav-title">
+            <i className="ti ti-chevron-left" aria-hidden="true"></i>
+            {prev.label}
+          </span>
+        </Link>
+      )}
+      {next && (
+        <Link href={next.href} className="doc-pagenav-card doc-next">
+          <span className="doc-pagenav-label">Next</span>
+          <span className="doc-pagenav-title">
+            {next.label}
+            <i className="ti ti-chevron-right" aria-hidden="true"></i>
+          </span>
+        </Link>
+      )}
+    </nav>
   );
 }
