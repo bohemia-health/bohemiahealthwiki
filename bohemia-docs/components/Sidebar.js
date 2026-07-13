@@ -50,8 +50,8 @@ function SidebarDropdown({ item, pathname }) {
         <i
           className={
             open
-              ? "ti ti-chevron-down dropdown-chevron open"
-              : "ti ti-chevron-down dropdown-chevron"
+              ? "ti ti-chevron-right dropdown-chevron open"
+              : "ti ti-chevron-right dropdown-chevron"
           }
           aria-hidden="true"
         ></i>
