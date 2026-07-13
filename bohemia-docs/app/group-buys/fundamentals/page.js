@@ -137,8 +137,8 @@ export default function GroupBuyFundamentalsPage() {
       <ul>
         <li>Requests for one complete batch of a particular peptide</li>
         <li>
-          Customized peptide configurations (e.g., Cartalax 40mg, KPV 50mg,
-          Retatrutide 100mg)
+          Customized peptide configurations (e.g., KPV 50mg, Retatrutide
+          100mg)
         </li>
         <li>
           Easily-identifiable or branded vial crimp/cap color combinations
@@ -155,28 +155,57 @@ export default function GroupBuyFundamentalsPage() {
       <h2>The Life Cycle of a Group Buy</h2>
       <ol>
         <li>
-          A Group Buy Organizer reaches out to the{" "}
-          <Link href="/coming-soon/vendor-overview">Vendor</Link> based on
-          group interest
+          The Organizer gauges interest based on environmental demand,
+          requests, and internal needs. Interest may be informed by prior
+          successes, market needs, member requests, or a company restock.
         </li>
         <li>
-          We verify guarantees, discuss capacity, negotiate pricing, and
-          establish the minimum order quantity (MOQ)
-        </li>
-        <li>The window of the Group Buy is confirmed</li>
-        <li>Orders are collected</li>
-        <li>The window closes and final numbers are reconciled</li>
-        <li>
-          An order sheet is written up with specifications of each item ordered
-          alongside total quantities
+          The Organizer reaches out to the{" "}
+          <Link href="/coming-soon/vendor-overview">vendor</Link> with a
+          request for pricing on specific items or a specific configuration.
         </li>
         <li>
-          Production of each item commences, followed by testing and shipping
-          from the vendor to the customer
+          The Organizer creates an intake form and curates a portal, link, or
+          web page where participants can place orders within the specified
+          guidelines and timeframe.
         </li>
         <li>
-          Any delays, shortages, address issues, and customs issues are
-          handled by us
+          Participants place orders through the intake form, portal, link, or
+          web page until the specified order amount or guideline is met.
+        </li>
+      </ol>
+
+      <Callout variant="info">
+        <p>
+          If a guideline or order amount is not met within the specified
+          window of a group buy, the buy may not be able to proceed as
+          planned. See{" "}
+          <Link href="/coming-soon/exceptions">Exceptions</Link> for guidance
+          on how to proceed.
+        </p>
+      </Callout>
+
+      <ol start={5}>
+        <li>
+          Once the deadline or order amount is met, the Organizer places the
+          order with the vendor.
+        </li>
+        <li>
+          Items are received in shipments, and the{" "}
+          <Link href="/coming-soon/fulfillment">fulfillment</Link> phase
+          begins.
+        </li>
+        <li>
+          The Organizer begins sending vials for testing — where testing is
+          included as a{" "}
+          <Link href="/coming-soon/guarantees">guarantee</Link> — shipping
+          orders to participants, and fulfilling the group buy model.
+        </li>
+        <li>
+          Once all guarantees, warranties, representations, and orders have
+          been fulfilled, the group buy is considered post-mortem. The topic
+          is marked as completed, closed, and archived for viewing and
+          informational purposes only.
         </li>
       </ol>
     </PageShell>
