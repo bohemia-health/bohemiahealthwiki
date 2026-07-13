@@ -96,17 +96,38 @@ export default function GroupBuyFundamentalsPage() {
         </p>
       </Callout>
 
-      <h2>Group Buy vs Direct Sale</h2>
-      <h3>Direct Sale</h3>
-      <p>
-        Direct sales involve vendor-to-consumer sales, are faster to fulfill,
-        and are not dependent on a minimum order quantity.
-      </p>
+      <h2>Group Buy vs. Direct Sale</h2>
       <h3>Group Buy</h3>
       <p>
-        Group buys are pre-planned, with guarantees based on the relationship
-        established between the entity and the{" "}
-        <Link href="/coming-soon/vendor-overview">vendor company</Link>.
+        Essentially, this is a preorder. The planning, setup, marketing,
+        product list,{" "}
+        <Link href="/coming-soon/testing-overview">testing</Link>, and
+        everything in between are organized by the group or the group buy
+        organizer. Most of the time, the marketing and product list are
+        based on{" "}
+        <Link href="/coming-soon/group-buy-research">research</Link>{" "}
+        facilitated by those running the group buy. The demand drives the
+        product list, testing, pricing, and everything else. If you don&apos;t
+        have the numbers to back up your group buy, then the group buy
+        doesn&apos;t happen. Point blank. The participants fund the group buy
+        and line your pockets with the padded profit margin.
+      </p>
+
+      <h3>Direct Sale</h3>
+      <p>
+        This is a financial transaction based on the qualities of the
+        product(s) the seller — potentially you, or Bohemia — owns. The stock
+        is on hand, with or without testing, at a set price. There is less
+        waiting, less risk, and much less work than running an entire group
+        buy.
+      </p>
+      <p>
+        Here, Bohemia has already offloaded most of the stress points for the
+        average consumer. They do not have to wait for stock to land, for
+        testing, or for the vendor to fulfill their end of the bargain. All of
+        this has been{" "}
+        <Link href="/coming-soon/vendor-vetting">vetted</Link>, verified, and
+        confirmed by Bohemia.
       </p>
 
       <p>
@@ -123,6 +144,13 @@ export default function GroupBuyFundamentalsPage() {
           Easily-identifiable or branded vial crimp/cap color combinations
         </li>
       </ul>
+
+      <p>
+        With both models, success depends on Bohemia&apos;s current
+        reputation. Our reputation is what allows us to facilitate large group
+        buys, sell multiple peptide lines, and create large custom group buys
+        — such as the Cartalax 40mg group buy with Uther.
+      </p>
 
       <h2>The Life Cycle of a Group Buy</h2>
       <ol>
