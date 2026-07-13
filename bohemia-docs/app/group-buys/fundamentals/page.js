@@ -152,6 +152,108 @@ export default function GroupBuyFundamentalsPage() {
         — such as the Cartalax 40mg group buy with Uther.
       </p>
 
+      <h2>Organizer Responsibilities</h2>
+      <p>
+        Regardless of the model, responsibilities within a group buy should be
+        clear from the beginning to prevent potential role overlap.
+      </p>
+      <p>
+        As a group buy organizer, your role includes all or most of the
+        following:
+      </p>
+      <ul>
+        <li>
+          Organizing, planning, and setting up the group buy form, content,
+          information, intake portal, and all required documentation —
+          collectively, the group buy documentation — in a convenient, easily
+          accessible format for participants to view, use, and save
+        </li>
+        <li>
+          Providing timely, accurate, and transparent{" "}
+          <Link href="/coming-soon/public-updates">public updates</Link> and
+          announcements regarding the status of a group buy
+        </li>
+        <li>
+          Communicating with and vetting the supplier(s) or vendor(s)
+          regarding guarantees, product availability, product lists,
+          quantities, and turnaround speeds
+        </li>
+        <li>
+          Upholding guarantees, standards, and warranties initially provided
+          to vendors within the guidelines established in the group buy
+          documentation
+        </li>
+        <li>
+          Obtaining a vial donor or providing a vial for third-party
+          independent testing
+        </li>
+        <li>
+          Sending the vial(s) to a third-party independent lab for testing, as
+          established in the group buy documentation
+        </li>
+        <li>
+          Communicating with and vetting the third-party laboratories used for
+          independent testing of products listed in the group buy
+          documentation
+        </li>
+        <li>
+          Uploading, posting, or archiving all third-party{" "}
+          <Link href="/coming-soon/coas">test reports</Link>, documents, and
+          related content for items sent for testing by the Organizer
+        </li>
+        <li>
+          Fulfilling and issuing all valid orders made during the group buy
+          window
+        </li>
+        <li>
+          Verifying{" "}
+          <Link href="/coming-soon/missing-items">
+            missing, broken, or damaged item claims
+          </Link>{" "}
+          made by participants
+        </li>
+        <li>Replacing missing items in a participant&apos;s order</li>
+        <li>
+          Accommodating requests made by participants within reasonable limits
+          and boundaries
+        </li>
+      </ul>
+
+      <Callout variant="info">
+        <p>
+          Bohemia attempts to accommodate all requests made by participants.
+          However, the following cannot be honored: vacation holds, time
+          constraints, or direct shipping requests, unless offered generally
+          or available in the participant&apos;s specific region. See{" "}
+          <Link href="/coming-soon/regulation-restriction-and-exclusions">
+            Regulation, Restriction and Exclusions
+          </Link>{" "}
+          for more information.
+        </p>
+      </Callout>
+
+      <h3>Limitations of Liability</h3>
+      <p>
+        On occasion, participants may be uncertain about what a group buy
+        organizer should or should not be held liable for. It is imperative
+        that this confusion is corrected. Group buy organizers should not be
+        held liable for:
+      </p>
+      <ul>
+        <li>
+          Production, customs, shipping, receiving, or processing timelines,
+          timeframes, speeds, or delays
+        </li>
+        <li>
+          Vendor, lab, or other third-party announcements, behavior,
+          conflicts, or actions
+        </li>
+        <li>
+          Test results — whether above or below the guarantees, warranties, or
+          representations stated in the group buy documentation
+        </li>
+      </ul>
+
       <h2>The Life Cycle of a Group Buy</h2>
       <ol>
         <li>
