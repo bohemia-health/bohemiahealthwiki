@@ -1,4 +1,5 @@
 import TableOfContents from "@/components/TableOfContents";
+import PageFooter from "@/components/PageFooter";
 
 export default function PageShell({ title, lede, children }) {
   return (
@@ -11,6 +12,7 @@ export default function PageShell({ title, lede, children }) {
           </header>
         )}
         {children}
+        <PageFooter />
       </article>
 
       <TableOfContents />

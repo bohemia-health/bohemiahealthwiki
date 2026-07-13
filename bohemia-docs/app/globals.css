@@ -685,6 +685,14 @@ nav li,
   text-decoration-color: var(--text-primary);
 }
 
+.doc-footer {
+  margin-top: var(--space-7);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}
+
 .doc-page table {
   width: 100%;
   margin: var(--space-5) 0 var(--space-6);
