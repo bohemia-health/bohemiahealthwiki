@@ -180,7 +180,7 @@ export default function GroupBuyFundamentalsPage() {
         </li>
         <li>
           Upholding guarantees, standards, and warranties initially provided
-          to vendors within the guidelines established in the group buy
+          by or to vendors within the guidelines established in the group buy
           documentation
         </li>
         <li>
