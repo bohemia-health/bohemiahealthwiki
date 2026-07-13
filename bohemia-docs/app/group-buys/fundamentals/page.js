@@ -95,7 +95,7 @@ export default function GroupBuyFundamentalsPage() {
           in the future.
         </p>
       </Callout>
-
+  
       <h2>Group Buy vs. Direct Sale</h2>
       <h3>Group Buy</h3>
       <p>
