@@ -34,11 +34,14 @@ const phases = [
   },
 ];
 
+/* node centers as fractions of the 640-unit viewBox (92/640, 320/640,
+   548/640), offset by half the 84px node size so they track the rings
+   at any rendered size */
 const nodePositions = [
-  { top: 50, left: 278 },
-  { top: 278, left: 506 },
-  { top: 506, left: 278 },
-  { top: 278, left: 50 },
+  { top: "calc(14.375% - 42px)", left: "calc(50% - 42px)" },
+  { top: "calc(50% - 42px)", left: "calc(85.625% - 42px)" },
+  { top: "calc(85.625% - 42px)", left: "calc(50% - 42px)" },
+  { top: "calc(50% - 42px)", left: "calc(14.375% - 42px)" },
 ];
 
 export default function GroupBuyLifecycleGraphic() {
@@ -116,8 +119,8 @@ export default function GroupBuyLifecycleGraphic() {
               active === index ? styles.activeNode : ""
             }`}
             style={{
-              top: `${nodePositions[index].top}px`,
-              left: `${nodePositions[index].left}px`,
+              top: nodePositions[index].top,
+              left: nodePositions[index].left,
             }}
             onMouseEnter={() => setActive(index)}
             onFocus={() => setActive(index)}

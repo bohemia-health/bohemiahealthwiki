@@ -1,15 +1,16 @@
 .wrapper {
   position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 48px 56px 88px;
+  /* span the full content area (viewport minus sidebar and content padding)
+     so the orbit centers on the content region, not the 75ch text column */
+  width: calc(100vw - var(--sidebar-width) - 2 * var(--content-pad));
+  padding: 48px 0 88px;
   color: #f5f6f8;
 }
 
 .orbit {
   position: relative;
-  width: 640px;
-  height: 640px;
+  width: min(100%, 780px);
+  aspect-ratio: 1;
   margin: 52px auto 0;
   user-select: none;
 }
@@ -120,13 +121,12 @@
 
 @media (max-width: 780px) {
   .wrapper {
-    padding: 36px 20px 64px;
+    /* sidebar is an overlay drawer here; content spans the viewport */
+    width: 100%;
+    padding: 36px 0 64px;
   }
 
   .orbit {
-    width: min(640px, 100%);
-    height: auto;
-    aspect-ratio: 1;
     transform: scale(0.86);
     transform-origin: top center;
     margin-bottom: -72px;
