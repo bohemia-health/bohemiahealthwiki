@@ -685,8 +685,57 @@ nav li,
   text-decoration-color: var(--text-primary);
 }
 
-.doc-footer {
+.doc-page a.doc-next {
   margin-top: var(--space-7);
+  margin-left: auto;
+  width: fit-content;
+  min-width: 200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+
+  padding: 0.85rem 1.1rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+
+  transition: border-color 0.15s ease;
+}
+
+.doc-page a.doc-next:hover {
+  border-color: var(--border);
+}
+
+.doc-next-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+}
+
+.doc-next-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.doc-next-title .ti {
+  font-size: 0.85em;
+  color: var(--text-muted);
+  transition: transform 0.15s ease;
+}
+
+.doc-page a.doc-next:hover .doc-next-title .ti {
+  transform: translateX(2px);
+}
+
+.doc-footer {
+  margin-top: var(--space-5);
   padding-top: var(--space-4);
   border-top: 1px solid var(--border-subtle);
   font-size: 0.8rem;
