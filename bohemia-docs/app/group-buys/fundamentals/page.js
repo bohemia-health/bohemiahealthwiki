@@ -7,17 +7,70 @@ export const metadata = {
 
 export default function GroupBuyFundamentalsPage() {
   return (
-    <PageShell
-      title="Group Buy Fundamentals"
-    >
+    <PageShell title="Group Buy Fundamentals">
+      <p>
+        Learn the fundamentals in how group orders are researched, made, and ran
+        all through one platform. Only system admin can create new group buys.
+        Click on the orbital to view each phase's scope.
+      </p>
       <DocsOrbitGraphic />
 
-      <h2>Group Buy</h2>
+      <h2>Group Buy Concepts</h2>
       <p>
-        <em>/gru:p/baɪ/</em> — a purchasing model where individuals pool their
-        collective buying power to secure discounts or bring custom products
-        to life.
+        Group Buys are an organized event or coordinated effort in which a group
+        of multiple individuals, or group buy organizer(s) (GBO) negotiate
+        wholesale pricing on an item or set of items. They combine their
+        singular purchasing power so that the vendor can provide discounts,
+        manufacture a customized formulation, or aquire the item under terms
+        that would not normally be available to individual clientele.
       </p>
+
+      <p>
+        Running a group buy is not simple, it requires effort on the part of the
+        organizers and the participants taking place within the group buy.
+        Because of this, there are caveats that must be implemented to ensure
+        the absolute highest possible success for a group buy.
+      </p>
+
+      <p>This takes place within the four phases:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Research</td>
+            <td>
+              Survey member demand, vet the compound, and confirm a supplier
+              can meet spec at volume.
+            </td>
+          </tr>
+          <tr>
+            <td>Negotiate</td>
+            <td>
+              Lock pricing, MOQs, and delivery windows with the shortlisted
+              supplier before committing.
+            </td>
+          </tr>
+          <tr>
+            <td>Order</td>
+            <td>
+              Place the confirmed order, collect payment from members, and
+              track fulfillment milestones.
+            </td>
+          </tr>
+          <tr>
+            <td>Fulfill</td>
+            <td>
+              Receive, quality-check, and dispatch to members; close the batch
+              and archive the COA.
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
       <h2>Group Buy vs Direct Sale</h2>
       <h3>Direct Sale</h3>
