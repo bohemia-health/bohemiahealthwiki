@@ -670,6 +670,19 @@ nav li,
   scroll-margin-top: calc(var(--navbar-height) + 24px);
 }
 
+.doc-page a {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--text-faint);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease;
+}
+
+.doc-page a:hover {
+  text-decoration-color: var(--text-primary);
+}
+
 .doc-page table {
   width: 100%;
   margin: var(--space-5) 0 var(--space-6);

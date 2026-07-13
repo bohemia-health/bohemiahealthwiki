@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import Callout from "@/components/Callout";
 import DocsOrbitGraphic from "@/components/DocsOrbitGraphic/DocsOrbitGraphic.js";
@@ -10,30 +11,30 @@ export default function GroupBuyFundamentalsPage() {
   return (
     <PageShell title="Group Buy Fundamentals">
       <p>
-        Learn the fundamentals in how group orders are researched, made, and ran
-        all through one platform. Only system admin can create new group buys.
-        Click on the orbital to view each phase's scope.
+        Learn the fundamentals of how group orders are researched, made, and
+        run — all through one platform. Only system admins can create new
+        group buys. Select a phase on the orbital to view its scope.
       </p>
       <DocsOrbitGraphic />
 
       <h2>Group Buy Concepts</h2>
       <p>
-        Group Buys are an organized event or coordinated effort in which a group
-        of multiple individuals, or group buy organizer(s) (GBO) negotiate
-        wholesale pricing on an item or set of items. They combine their
-        singular purchasing power so that the vendor can provide discounts,
-        manufacture a customized formulation, or aquire the item under terms
+        A group buy is an organized, coordinated effort in which multiple
+        individuals, led by one or more group buy organizers (GBOs), negotiate
+        wholesale pricing on an item or set of items. Participants combine
+        their purchasing power so that the vendor can provide discounts,
+        manufacture a customized formulation, or acquire the item under terms
         that would not normally be available to individual clientele.
       </p>
 
       <p>
-        Running a group buy is not simple, it requires effort on the part of the
-        organizers and the participants taking place within the group buy.
-        Because of this, there are caveats that must be implemented to ensure
-        the absolute highest possible success for a group buy.
+        Running a group buy is not simple — it requires effort from both the
+        organizers and the participants. Because of this, there are safeguards
+        that must be in place to give every group buy the highest possible
+        chance of success.
       </p>
 
-      <p>This takes place within the four phases:</p>
+      <p>The work breaks down into four phases:</p>
       <table>
         <thead>
           <tr>
@@ -43,28 +44,38 @@ export default function GroupBuyFundamentalsPage() {
         </thead>
         <tbody>
           <tr>
-            <td>Research</td>
+            <td>
+              <Link href="/coming-soon/group-buy-research">Research</Link>
+            </td>
             <td>
               Survey member demand, vet the compound, and confirm a supplier
               can meet spec at volume.
             </td>
           </tr>
           <tr>
-            <td>Negotiate</td>
+            <td>
+              <Link href="/coming-soon/pricing-and-profitability">
+                Negotiate
+              </Link>
+            </td>
             <td>
               Lock pricing, MOQs, and delivery windows with the shortlisted
               supplier before committing.
             </td>
           </tr>
           <tr>
-            <td>Order</td>
+            <td>
+              <Link href="/coming-soon/order-intake">Order</Link>
+            </td>
             <td>
               Place the confirmed order, collect payment from members, and
               track fulfillment milestones.
             </td>
           </tr>
           <tr>
-            <td>Fulfill</td>
+            <td>
+              <Link href="/coming-soon/fulfillment">Fulfill</Link>
+            </td>
             <td>
               Receive, quality-check, and dispatch to members; close the batch
               and archive the COA.
@@ -93,8 +104,9 @@ export default function GroupBuyFundamentalsPage() {
       </p>
       <h3>Group Buy</h3>
       <p>
-        Pre-planned with guarantees based on the relationship established
-        between the entity and the vendor company.
+        Group buys are pre-planned, with guarantees based on the relationship
+        established between the entity and the{" "}
+        <Link href="/coming-soon/vendor-overview">vendor company</Link>.
       </p>
 
       <p>
@@ -104,7 +116,7 @@ export default function GroupBuyFundamentalsPage() {
       <ul>
         <li>Requests for one complete batch of a particular peptide</li>
         <li>
-          Customized peptide configurations (i.e., Cartalax 40mg, KPV 50mg,
+          Customized peptide configurations (e.g., Cartalax 40mg, KPV 50mg,
           Retatrutide 100mg)
         </li>
         <li>
@@ -115,27 +127,28 @@ export default function GroupBuyFundamentalsPage() {
       <h2>The Life Cycle of a Group Buy</h2>
       <ol>
         <li>
-          A Group Buy Organizer reaches out to the Vendor based on group
-          interest
+          A Group Buy Organizer reaches out to the{" "}
+          <Link href="/coming-soon/vendor-overview">Vendor</Link> based on
+          group interest
         </li>
         <li>
           We verify guarantees, discuss capacity, negotiate pricing, and
-          establish minimum order quantity
+          establish the minimum order quantity (MOQ)
         </li>
         <li>The window of the Group Buy is confirmed</li>
         <li>Orders are collected</li>
         <li>The window closes and final numbers are reconciled</li>
         <li>
           An order sheet is written up with specifications of each item ordered
-          alongside total quantity
+          alongside total quantities
         </li>
         <li>
-          Production of each item commences, testing, shipping from the vendor,
-          to the customer
+          Production of each item commences, followed by testing and shipping
+          from the vendor to the customer
         </li>
         <li>
-          Any delays, shortages, address issues, and custom issues are handled
-          by us
+          Any delays, shortages, address issues, and customs issues are
+          handled by us
         </li>
       </ol>
     </PageShell>
