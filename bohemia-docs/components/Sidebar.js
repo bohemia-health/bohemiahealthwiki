@@ -92,15 +92,6 @@ export default function Sidebar({ open = false }) {
 
   return (
     <aside className={open ? "sidebar open" : "sidebar"}>
-      <div className="sidebar-search">
-        <i className="ti ti-search" aria-hidden="true"></i>
-        <input
-          type="text"
-          placeholder="Search articles..."
-          aria-label="Search articles"
-        />
-      </div>
-
       <div
         className={scrolling ? "sidebar-scroll scrolling" : "sidebar-scroll"}
         onScroll={handleScroll}
