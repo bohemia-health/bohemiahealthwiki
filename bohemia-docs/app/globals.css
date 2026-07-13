@@ -531,7 +531,7 @@ nav li,
 }
 
 .dropdown-chevron.open {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 /* SIDEBAR FOOTER */
 
