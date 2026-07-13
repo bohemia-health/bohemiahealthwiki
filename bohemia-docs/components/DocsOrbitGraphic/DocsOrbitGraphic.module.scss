@@ -1,15 +1,16 @@
 .wrapper {
   position: relative;
-  /* span the full content area (viewport minus sidebar and content padding)
-     so the orbit centers on the content region, not the 75ch text column */
-  width: calc(100vw - var(--sidebar-width) - 2 * var(--content-pad));
+  /* break out of the 75ch column symmetrically so the orbit stays
+     centered on the reading axis without invading the TOC pane */
+  width: calc(100% + 6rem);
+  margin-inline: -3rem;
   padding: 48px 0 88px;
   color: #f5f6f8;
 }
 
 .orbit {
   position: relative;
-  width: min(100%, 780px);
+  width: min(100%, 720px);
   aspect-ratio: 1;
   margin: 52px auto 0;
   user-select: none;
@@ -121,8 +122,8 @@
 
 @media (max-width: 780px) {
   .wrapper {
-    /* sidebar is an overlay drawer here; content spans the viewport */
     width: 100%;
+    margin-inline: 0;
     padding: 36px 0 64px;
   }
 

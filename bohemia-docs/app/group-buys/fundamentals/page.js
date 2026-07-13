@@ -1,5 +1,4 @@
 import PageShell from "@/components/PageShell";
-import { Card, CardGrid } from "@/components/Card";
 import DocsOrbitGraphic from "@/components/DocsOrbitGraphic/DocsOrbitGraphic.js";
 
 export const metadata = {
@@ -13,42 +12,39 @@ export default function GroupBuyFundamentalsPage() {
     >
       <DocsOrbitGraphic />
 
-      <Card variant="highlight" titleAs="h2" title="Group Buy">
-        <p>
-          <em>/gru:p/baɪ/</em> — a purchasing model where individuals pool
-          their collective buying power to secure discounts or bring custom
-          products to life.
-        </p>
-      </Card>
+      <h2>Group Buy</h2>
+      <p>
+        <em>/gru:p/baɪ/</em> — a purchasing model where individuals pool their
+        collective buying power to secure discounts or bring custom products
+        to life.
+      </p>
 
       <h2>Group Buy vs Direct Sale</h2>
-      <CardGrid>
-        <Card title="Direct Sale">
-          <p>
-            Direct sales involve vendor-to-consumer sales, are faster to
-            fulfill, and are not dependent on a minimum order quantity.
-          </p>
-        </Card>
-        <Card title="Group Buy">
-          <p>
-            Pre-planned with guarantees based on the relationship established
-            between the entity and the vendor company.
-          </p>
-        </Card>
-      </CardGrid>
+      <h3>Direct Sale</h3>
+      <p>
+        Direct sales involve vendor-to-consumer sales, are faster to fulfill,
+        and are not dependent on a minimum order quantity.
+      </p>
+      <h3>Group Buy</h3>
+      <p>
+        Pre-planned with guarantees based on the relationship established
+        between the entity and the vendor company.
+      </p>
 
-      <Card title="Group Buys hold more weight during negotiation, ordering, and fulfillment. This can include:">
-        <ul>
-          <li>Requests for one complete batch of a particular peptide</li>
-          <li>
-            Customized peptide configurations (i.e., Cartalax 40mg, KPV 50mg,
-            Retatrutide 100mg)
-          </li>
-          <li>
-            Easily-identifiable or branded vial crimp/cap color combinations
-          </li>
-        </ul>
-      </Card>
+      <p>
+        Group Buys hold more weight during negotiation, ordering, and
+        fulfillment. This can include:
+      </p>
+      <ul>
+        <li>Requests for one complete batch of a particular peptide</li>
+        <li>
+          Customized peptide configurations (i.e., Cartalax 40mg, KPV 50mg,
+          Retatrutide 100mg)
+        </li>
+        <li>
+          Easily-identifiable or branded vial crimp/cap color combinations
+        </li>
+      </ul>
 
       <h2>The Life Cycle of a Group Buy</h2>
       <ol>
