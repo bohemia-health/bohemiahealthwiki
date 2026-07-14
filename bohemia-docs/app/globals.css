@@ -831,6 +831,16 @@ nav li,
   margin-top: 0.5em;
 }
 
+.callout--danger {
+  background: rgba(235, 87, 87, 0.08);
+  border: 1px solid rgba(235, 87, 87, 0.28);
+  color: var(--text-secondary);
+}
+
+.callout--danger i {
+  color: #e05c5c;
+}
+
 .callout--warning {
   background: rgba(240, 185, 75, 0.07);
   border: 1px solid rgba(240, 185, 75, 0.22);

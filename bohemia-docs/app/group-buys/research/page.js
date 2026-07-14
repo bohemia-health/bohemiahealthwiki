@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PageShell from "@/components/PageShell";
+import Callout from "@/components/Callout";
 
 export const metadata = {
   title: "User Research — Bohemia Health Docs",
@@ -211,6 +212,18 @@ export default function GroupBuyResearchPage() {
         convenient and easily accessible, and it should collect exactly what you
         need to fulfill an order, nothing more.
       </p>
+
+      <Callout variant="danger">
+        <p>
+          Intake forms collect personally identifiable information (PII), such
+          as names, addresses, and contact details. Protecting participant
+          privacy is a core responsibility of every organizer. Collect only
+          what fulfillment requires, limit access to those who need it, and
+          never share participant information outside of the group buy. Review
+          our <Link href="https://bhmhlth.com/privacy">privacy policy</Link>{" "}
+          for the standards every group buy is held to.
+        </p>
+      </Callout>
 
       <h3>The group buy documentation</h3>
       <p>
