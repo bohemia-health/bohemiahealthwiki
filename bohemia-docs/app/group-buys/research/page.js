@@ -191,6 +191,14 @@ export default function GroupBuyResearchPage() {
           </p>
         </li>
       </ul>
+      <img
+        src="/assets/ezformz-landing-page.png"
+        alt="EZFormz landing page showing a mobile-friendly order form with products, quantities, and a subtotal"
+        className="doc-figure"
+        width={1785}
+        height={1054}
+      />
+
       <p>
         After you've chosen tool or built your framework, you can move on to
         what information should be collected on this form.
