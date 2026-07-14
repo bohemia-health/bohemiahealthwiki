@@ -77,12 +77,12 @@ export default function GroupBuyResearchPage() {
           <h3>Ask your consumers directly</h3>
           <p>
             Signals and educated guesses only get you so far. Post an interest
-            check where your consumers already are (a poll, a form, or a pinned
-            thread) and count the responses. Treat any opinion that does not
-            come from a consumer as an assumption that still has to be proven.
-            The interest check is what gives you the numbers, and if you
-            don&apos;t have the numbers to back up your group buy, the group
-            buy doesn&apos;t happen.
+            check where your consumers already are (Such as, a poll, a form, or
+            a pinned thread) and count the responses. Treat any opinion that
+            does not come from a consumer as an assumption that still has to be
+            proven. The interest check is what gives you the numbers, and if you
+            don&apos;t have the numbers to back up your group buy, the group buy
+            doesn&apos;t happen.
           </p>
         </li>
 
@@ -90,7 +90,7 @@ export default function GroupBuyResearchPage() {
           <h3>Write down what you learned</h3>
           <p>
             Research only counts if you can show it. Summarize your findings
-            into a short demand statement that the rest of the group buy is
+            into a short thread or statement that the rest of the group buy is
             built on:
           </p>
           <p>
@@ -102,13 +102,13 @@ export default function GroupBuyResearchPage() {
           <p>
             If you can&apos;t fill in every blank, you aren&apos;t done
             researching. This statement becomes the foundation for{" "}
-            <Link href="#planning-and-setup">Planning &amp; Setup</Link>
-            , the product list, and your marketing.
+            <Link href="#planning-and-setup">Planning &amp; Setup</Link>, the
+            product list, and your marketing.
           </p>
         </li>
 
         <li>
-          <h3>Decide: go or no-go</h3>
+          <h3>Decide: yes or no</h3>
           <p>
             This is the gate every group buy must pass before planning begins.
             Move forward only when all three are true:
@@ -133,26 +133,75 @@ export default function GroupBuyResearchPage() {
           </ul>
           <p>
             If any of these are unmet, park the buy or keep researching.
-            Skipping this gate doesn&apos;t speed anything up, it just moves
-            the failure later, where it costs more.
+            Skipping this gate doesn&apos;t speed anything up, it just moves the
+            failure later, where it costs more.
           </p>
         </li>
       </ol>
 
       <h2 id="planning-and-setup">Planning &amp; Setup</h2>
       <p>
-        Once your research clears the go/no-go gate, the work shifts from
-        proving demand to building the group buy itself. Everything
-        participants see, use, or save comes out of this phase, and all of it
-        builds on the demand statement you wrote during research.
+        {" "}
+        Once you've completed your research, the work shifts from pinpointing
+        demand to building your group buy. Each thing a participant sees, uses,
+        or saves comes from this stage is uniquely built on the research you've
+        collected.{" "}
+      </p>
+
+      <p>
+        Whether you're new to organizing or you've been working them for years,
+        finding the technology you need is an important first step. With so many
+        technologies available to you, it's sometimes difficult to know where to
+        start. The following topics offer a high-level view of the technologies
+        available to you, and guidance about which technologies you might choose
+        to solve particular problems.
+      </p>
+
+      <h3>Choosing or building a form-building tool</h3>
+      <p>
+        Deciding between building an interface to receive or retrieve orders and
+        using a web based form tool may be confusing. The difference is pure
+        necessity. When choosing, ask yourself these three things:
+      </p>
+
+      <ul>
+        <li>
+          Do I have the skillset required to create a fully customized, fully
+          integreted form?
+        </li>
+        <li>Is there enough time to develop this form?</li>
+        <li>Would this form be what a participant expects?</li>
+      </ul>
+      <p>
+        If you answered 'no' to any of these, you need to search for a web based
+        form tool.
+      </p>
+
+      <ul>
+        <li>
+          <h4>
+            <Link href="https://ezformz.net/">Ezformz</Link>
+          </h4>
+          <p>
+            Ezformz is a free, web based survey and form building tool. Each
+            form offers mobile friendly straightforward ways to build your form,
+            and fetch only the data you need. They also offer features you'd
+            expect, like duplicate tracking, order status, and integration with
+            Google Sheets.
+          </p>
+        </li>
+      </ul>
+      <p>
+        After you've chosen tool or built your framework, you can move on to
+        what information should be collected on this form.
       </p>
 
       <h3>The intake form</h3>
       <p>
         The intake form (or portal, link, or web page) is where participants
         place orders within the guidelines and timeframe you set. It should be
-        convenient and easily accessible, and it should collect exactly what
-        you need to fulfill an order, nothing more.
+        convenient and easily accessible, and it should collect exactly what you
+        need to fulfill an order, nothing more.
       </p>
 
       <h3>The group buy documentation</h3>
@@ -161,14 +210,14 @@ export default function GroupBuyResearchPage() {
         documentation, collectively the group buy documentation, is the single
         source of truth for your group buy. This is where guarantees,{" "}
         <Link href="/coming-soon/testing-overview">testing</Link> plans,
-        timelines, and pricing live in a format participants can view, use,
-        and save.
+        timelines, and pricing live in a format participants can view, use, and
+        save.
       </p>
 
       <h3>The announcement</h3>
       <p>
-        Participants follow the status of a group buy through timely,
-        accurate, and transparent{" "}
+        Participants follow the status of a group buy through timely, accurate,
+        and transparent{" "}
         <Link href="/coming-soon/public-updates">public updates</Link>. Plan
         where announcements will be posted and how often before the buy opens,
         not after.
