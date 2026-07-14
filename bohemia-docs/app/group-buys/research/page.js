@@ -102,9 +102,7 @@ export default function GroupBuyResearchPage() {
           <p>
             If you can&apos;t fill in every blank, you aren&apos;t done
             researching. This statement becomes the foundation for{" "}
-            <Link href="/coming-soon/planning-and-setup">
-              Planning &amp; Setup
-            </Link>
+            <Link href="#planning-and-setup">Planning &amp; Setup</Link>
             , the product list, and your marketing.
           </p>
         </li>
@@ -140,6 +138,41 @@ export default function GroupBuyResearchPage() {
           </p>
         </li>
       </ol>
+
+      <h2 id="planning-and-setup">Planning &amp; Setup</h2>
+      <p>
+        Once your research clears the go/no-go gate, the work shifts from
+        proving demand to building the group buy itself. Everything
+        participants see, use, or save comes out of this phase, and all of it
+        builds on the demand statement you wrote during research.
+      </p>
+
+      <h3>The intake form</h3>
+      <p>
+        The intake form (or portal, link, or web page) is where participants
+        place orders within the guidelines and timeframe you set. It should be
+        convenient and easily accessible, and it should collect exactly what
+        you need to fulfill an order, nothing more.
+      </p>
+
+      <h3>The group buy documentation</h3>
+      <p>
+        The form, content, information, intake portal, and all required
+        documentation, collectively the group buy documentation, is the single
+        source of truth for your group buy. This is where guarantees,{" "}
+        <Link href="/coming-soon/testing-overview">testing</Link> plans,
+        timelines, and pricing live in a format participants can view, use,
+        and save.
+      </p>
+
+      <h3>The announcement</h3>
+      <p>
+        Participants follow the status of a group buy through timely,
+        accurate, and transparent{" "}
+        <Link href="/coming-soon/public-updates">public updates</Link>. Plan
+        where announcements will be posted and how often before the buy opens,
+        not after.
+      </p>
     </PageShell>
   );
 }
