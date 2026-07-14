@@ -17,6 +17,14 @@ export default function GroupBuyResearchPage() {
         up building the wrong thing.
       </p>
 
+      <img
+        src="/assets/yes-no-graphic.png"
+        alt="Two decision states: a no-go marked with an X and a go marked with a checkmark"
+        className="doc-figure"
+        width={960}
+        height={600}
+      />
+
       <h2>Understanding Services and Needs</h2>
       <p>
         A group buy provides a service to the consumer. Consumers use group buys

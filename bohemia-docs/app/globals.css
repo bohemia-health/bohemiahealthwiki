@@ -672,6 +672,14 @@ nav li,
   scroll-margin-top: calc(var(--navbar-height) + 24px);
 }
 
+.doc-figure {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: var(--space-5) auto;
+  border-radius: var(--radius-md);
+}
+
 .doc-page a {
   color: var(--text-primary);
   text-decoration: underline;
