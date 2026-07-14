@@ -25,7 +25,7 @@ export const DROPDOWNS = [
     basePath: "/group-buys",
     links: [
       { label: "Fundamentals", href: "/group-buys/fundamentals" },
-      { label: "Research", href: "/coming-soon/group-buy-research" },
+      { label: "Research", href: "/group-buys/research" },
       { label: "Planning & Setup", href: "/coming-soon/planning-and-setup" },
       { label: "Pricing & Profitability", href: "/coming-soon/pricing-and-profitability" },
       { label: "Vendors", href: "/coming-soon/group-buy-vendors" },

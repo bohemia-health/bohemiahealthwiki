@@ -45,7 +45,7 @@ export default function GroupBuyFundamentalsPage() {
         <tbody>
           <tr>
             <td>
-              <Link href="/coming-soon/group-buy-research">Research</Link>
+              <Link href="/group-buys/research">Research</Link>
             </td>
             <td>
               Survey member demand, vet the compound, and confirm a supplier
@@ -105,7 +105,7 @@ export default function GroupBuyFundamentalsPage() {
         everything in between are organized by the group or the group buy
         organizer. Most of the time, the marketing and product list are
         based on{" "}
-        <Link href="/coming-soon/group-buy-research">research</Link>{" "}
+        <Link href="/group-buys/research">research</Link>{" "}
         facilitated by those running the group buy. The demand drives the
         product list, testing, pricing, and everything else. If you don&apos;t
         have the numbers to back up your group buy, then the group buy
