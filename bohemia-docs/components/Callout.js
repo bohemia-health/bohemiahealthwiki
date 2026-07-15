@@ -1,4 +1,5 @@
 const ICONS = {
+  danger: "ti-alert-octagon",
   warning: "ti-alert-triangle",
   info: "ti-info-circle",
 };
