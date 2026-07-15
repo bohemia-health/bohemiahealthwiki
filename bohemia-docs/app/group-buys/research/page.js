@@ -294,7 +294,7 @@ export default function GroupBuyResearchPage() {
         market expectations. User's expect a standard, when unmet, can be
         particularly angsty. Avoid:
       </p>
-      <ul>
+      <ul className="list-avoid">
         <li>
           <p>Vague or confusing guarantees</p>
           <ul>
