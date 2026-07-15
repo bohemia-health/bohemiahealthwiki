@@ -158,6 +158,19 @@ export default function GroupBuyResearchPage() {
         to solve particular problems.
       </p>
 
+      <h3>Pricing and Profitability</h3>
+      <p>
+        The second most important thing of facilitating a group buy is
+        considering whether the services a merchant provides has an equivalent
+        value in sales. Too low in profits, and you're in the negative. Too
+        high, and you'll barely pull in any sales.
+      </p>
+
+      <p>
+        Rule of thumb, start by calculating the minimum order quantity provided
+        by the vendor.
+      </p>
+
       <h3>Choosing or building a form-building tool</h3>
       <p>
         Deciding between building an interface to receive or retrieve orders and
@@ -296,12 +309,13 @@ export default function GroupBuyResearchPage() {
       </p>
       <ul className="list-avoid">
         <li>
+          {/* Guidance 1 - Vagueness or Creating Confusion */}
           <p>Vague or confusing guarantees</p>
           <ul>
             <li>
               <p>
-                "97% Purity and 95% Mass" when the vendor usually guarantees 99%
-                purity and mass or higher
+                "97% Purity and 95% Mass" when the &#123;vendor&#125; usually
+                guarantees 99% purity and mass or higher"
               </p>
             </li>
             <li>
@@ -312,9 +326,33 @@ export default function GroupBuyResearchPage() {
             </li>
           </ul>
         </li>
+
+        {/* Guidance 2 - Incorrect Grammar, Writing Structure, or etc */}
+
+        <li>
+          <p>Poor sentence structure, grammar, or tone</p>
+          <ul>
+            <li>
+              <p>"Testing Mass Purity Janoshik."</p>
+            </li>
+            <li>
+              <p>
+                "It is the last day of the buy get those final orders in by 3pm
+                eastern, noon pacific!"
+              </p>
+            </li>
+
+            <li>
+              <p>
+                "Please do not buy from us if you cannot read. I'm sick of this,
+                do better!"
+              </p>
+            </li>
+          </ul>
+        </li>
       </ul>
 
-      <h3>The announcement</h3>
+      <h3>Announcements, Updates & Status Checks</h3>
       <p>
         Participants follow the status of a group buy through timely, accurate,
         and transparent{" "}
