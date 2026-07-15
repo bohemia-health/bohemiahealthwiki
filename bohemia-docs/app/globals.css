@@ -945,6 +945,36 @@ nav li,
   font-weight: 400;
 }
 
+/* "Avoid" lists: red x markers on top-level items, italic nested examples */
+.list-avoid {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-avoid > li {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.list-avoid > li::before {
+  font-family: "tabler-icons";
+  content: "\eb55";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  font-size: 1rem;
+  line-height: 1;
+  color: #e05c5c;
+}
+
+.list-avoid li li {
+  font-style: italic;
+}
+
+.list-avoid li li::before {
+  content: none;
+}
+
 /* CARDS */
 
 .card {

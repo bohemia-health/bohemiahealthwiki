@@ -205,27 +205,80 @@ export default function GroupBuyResearchPage() {
         what information should be collected on this form.
       </p>
 
-      <h3>The intake form</h3>
+      <h3>Design Checkout</h3>
       <p>
-        The intake form (or portal, link, or web page) is where participants
-        place orders within the guidelines and timeframe you set. It should be
-        convenient and easily accessible, and it should collect exactly what you
-        need to fulfill an order, nothing more.
+        Checkout records a transaction, sale, or agreement made between a seller
+        and buyer. You can utilize prebuilt UI customized to your needs, third
+        party web based tools, or an embedded form linked in your website.
       </p>
+
+      <p>
+        Bohemia lets merchants use whatever form, portal, or third party tool to
+        create a checkout for buyers. Sensitive information should only include
+        what's necessary to ship the buyer's order, such as:
+      </p>
+
+      <ul>
+        <li>
+          <p>First, last, middle names</p>
+        </li>
+        <li>
+          <p>Username</p>
+        </li>
+        <li>
+          <p>Home, Private, PO Box, or Private Mailbox Addresses (PMB)</p>
+        </li>
+        <li>
+          <p>Email address</p>
+        </li>
+        <li>
+          <p>Phone Number</p>
+        </li>
+
+        <li>
+          <p>VAT/Tax ID information (for international orders)</p>
+        </li>
+
+        <li>
+          <p>Method of Payment</p>
+        </li>
+
+        <li>
+          <p>Payment Information</p>
+        </li>
+      </ul>
 
       <Callout variant="danger">
         <p>
-          Intake forms collect personally identifiable information (PII), such
-          as names, addresses, and contact details. Protecting participant
-          privacy is a core responsibility of every organizer. Collect only
-          what fulfillment requires, limit access to those who need it, and
-          never share participant information outside of the group buy. Review
-          our <Link href="https://bhmhlth.com/privacy">privacy policy</Link>{" "}
-          for the standards every group buy is held to.
+          Privacy is a fundamental human right. It's also one of our core
+          values. Users grant us access to personally identifiable information,
+          such as names, addresses, and contact details. Only necessary
+          information should be safeguarded and retained.
+        </p>
+
+        <p>
+          View our{" "}
+          <Link href="https://bhmhlth.com/privacy">privacy policy.</Link>
         </p>
       </Callout>
 
-      <h3>The group buy documentation</h3>
+      <p>
+        Checkout's should also include enough guidance and information for a
+        user to make an informed decision. Products, descriptions, images, fees,
+        and options should be clearly listed on the checkout form. The standard
+        is displaying all instructions, requirements, terms, and conditions in
+        an easily-readable, accessible format.
+      </p>
+
+      <Callout variant="warning">
+        <p>
+          Don't make the mistake of assuming users can understand products,
+          amounts items, descriptions, terms, or conditions. When designing
+          checkout, everything should be written with the assumption of 'holding
+          the user's hand.'
+        </p>
+      </Callout>
+
       <p>
         The form, content, information, intake portal, and all required
         documentation, collectively the group buy documentation, is the single
@@ -234,6 +287,32 @@ export default function GroupBuyResearchPage() {
         timelines, and pricing live in a format participants can view, use, and
         save.
       </p>
+
+      <h3>Guidance on Specifications</h3>
+      <p>
+        It's important when writing specifications that merchants adhere to
+        market expectations. User's expect a standard, when unmet, can be
+        particularly angsty. Avoid:
+      </p>
+      <ul className="list-avoid">
+        <li>
+          <p>Vague or confusing guarantees</p>
+          <ul>
+            <li>
+              <p>
+                "97% Purity and 95% Mass" when the vendor usually guarantees 99%
+                purity and mass or higher
+              </p>
+            </li>
+            <li>
+              <p>
+                "&#123;vendor&#125; says since this is a custom-made batch, we
+                are only guaranteed &#123;mass&#125;% and &#123;purity&#125;%."
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
 
       <h3>The announcement</h3>
       <p>
