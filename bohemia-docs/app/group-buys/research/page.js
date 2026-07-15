@@ -1,6 +1,7 @@
 import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import Callout from "@/components/Callout";
+import BreakEvenCalc from "@/components/BreakEvenCalc/BreakEvenCalc";
 
 export const metadata = {
   title: "User Research — Bohemia Health Docs",
@@ -170,6 +171,8 @@ export default function GroupBuyResearchPage() {
         Rule of thumb, start by calculating the minimum order quantity provided
         by the vendor.
       </p>
+
+      <BreakEvenCalc />
 
       <h3>Choosing or building a form-building tool</h3>
       <p>
