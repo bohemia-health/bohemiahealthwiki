@@ -4,9 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { breadcrumbsForPath } from "@/components/nav-data";
 
-export default function Navbar({ menuOpen, onMenuToggle }) {
+export default function Navbar({ menuOpen, onMenuToggle, user }) {
   const pathname = usePathname();
   const crumbs = breadcrumbsForPath(pathname);
+  const loginHref = `https://login.bhmhlth.com/sign-in?return=${encodeURIComponent(
+    `https://wiki.bhmhlth.com${pathname}`
+  )}`;
 
   return (
     <nav className="navbar">
@@ -103,9 +106,13 @@ export default function Navbar({ menuOpen, onMenuToggle }) {
           </Link>
         </li>
         <li className="login-item">
-          <Link href="/coming-soon/log-in" className="login-btn">
-            Log in
-          </Link>
+          {user ? (
+            <span className="login-btn">{user.firstName || user.email}</span>
+          ) : (
+            <a href={loginHref} className="login-btn">
+              Log in
+            </a>
+          )}
         </li>
       </ul>
     </nav>

@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 
-export default function LayoutClient({ children }) {
+export default function LayoutClient({ children, user }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const pathname = usePathname();
   const [prevPathname, setPrevPathname] = useState(pathname);
@@ -20,6 +20,7 @@ export default function LayoutClient({ children }) {
       <Navbar
         menuOpen={sidebarOpen}
         onMenuToggle={() => setSidebarOpen((open) => !open)}
+        user={user}
       />
       <div className="container">
         <Sidebar open={sidebarOpen} />

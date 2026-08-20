@@ -1,5 +1,6 @@
 import { Onest, Inter, DM_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { withAuth } from "@workos-inc/authkit-nextjs";
 import LayoutClient from "@/components/LayoutClient";
 import "./globals.css";
 
@@ -35,7 +36,9 @@ export const viewport = {
   themeColor: "#000000",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const { user } = await withAuth();
+
   return (
     <html
       lang="en"
@@ -48,7 +51,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <LayoutClient>{children}</LayoutClient>
+        <LayoutClient user={user}>{children}</LayoutClient>
         <Analytics />
       </body>
     </html>
